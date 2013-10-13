@@ -15,4 +15,4 @@ feature "Deleting a post" do
     page.wont_have_content "Gloria mundi."
 
   end
-end`
+end

@@ -8,7 +8,7 @@ feature "Creating a blog post" do
 
     # User enters title and body for new blog post
     fill_in "Title", with: "Let there be a post"
-    fill_in "Body", with: "And we saw that the post was good."
+    fill_in "Content", with: "And we saw that the post was good."
 
     # User clicks Save Post (or local equivelent) to save post to database
     click_on "Create Post"
