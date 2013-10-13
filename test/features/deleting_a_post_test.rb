@@ -3,7 +3,7 @@ require "test_helper"
 feature "Deleting a post" do
   scenario "Deleting an existing post" do
 
-    Post.create(title: "Sic transit", body: "Gloria mundi.")
+    Post.create(title: "Sic transit", content: "Gloria mundi.")
 
     # Visit the viewing page for the post
     visit posts_path

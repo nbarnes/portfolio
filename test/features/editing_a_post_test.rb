@@ -3,22 +3,22 @@ require "test_helper"
 feature "Editing a post" do
   scenario "Changing the title or body of an existing post" do
 
-    post = Post.create(title: "All things...", body: "Change in their way, in their time.")
+    post = Post.create(title: "All things...", content: "Change in their way, in their time.")
 
     # Visit the viewing page for the post
-    visit posts_path(post)
+    visit post_path(post)
 
     # Click an Edit button to go the Editing interface
-    click_on "Edit Post"
+    click_on "Edit"
 
     # change the title and/or body
     fill_in "Title", with: "Some things...."
-    fill_in "Body", with: "Never change."
+    fill_in "Content", with: "Never change."
 
     # have the changes echoed to the user with a confirmation request
-    click_on "Save Changes"
+    click_on "Update Post"
 
-    page.text.must_include "Post was successfully edited"
+    page.text.must_include "Post was successfully updated"
     page.text.must_include "Some things...."
 
   end

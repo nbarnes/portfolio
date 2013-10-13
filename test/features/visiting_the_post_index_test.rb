@@ -3,7 +3,7 @@ require "test_helper"
 feature "visiting the post index" do
   scenario "displaying stored posts to the user" do
     # There is one or most posts in the database
-    Post.create(title: "Becoming a Code Fellow", body: "Means striving for excellence!")
+    Post.create(title: "Becoming a Code Fellow", content: "Means striving for excellence!")
 
     # Visitor loads the blog index page
     visit posts_path
