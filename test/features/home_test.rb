@@ -1,9 +1,8 @@
 require "test_helper"
 
-feature "Home" do
-  scenario "the test is sound" do
+feature "Front page" do
+  scenario "Displays the front page welcome message" do
     visit root_path
-    page.must_have_content "My name is Nathaniel Barnes"
-    page.wont_have_content "Goobye All!"
+    page.must_have_content "Nathaniel Barnes"
   end
 end
