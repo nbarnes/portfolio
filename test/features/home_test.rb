@@ -3,7 +3,7 @@ require "test_helper"
 feature "Home" do
   scenario "the test is sound" do
     visit root_path
-    page.must_have_content "hello world"
+    page.must_have_content "My name is Nathaniel Barnes"
     page.wont_have_content "Goobye All!"
   end
 end
