@@ -1,65 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html>
+<head>
+  <title>Portfolio</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <title>A Lightsaber Mind In A .357 World</title>
+<div class="container">
+  <%= yield %>
+</div>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <div id="wrapper">
-
-      <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href="#">Blog</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="https://github.com/nbarnes">Github</a></li>
-        </ul>
-      </div>
-
-      <!-- Page content -->
-      <div id="page-content-wrapper">
-        <div class="content-header">
-          <h1>
-            <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
-            A Lightsaber Mind In A .357 World
-          </h1>
-        </div>
-        <!-- Keep all page content within the page-content inset div! -->
-        <div class="col-md-9">
-          <h2>Hello, World!</h2>
-          <%= yield %>
-        </div>
-        <div class="col-md-3">
-          <h2>About Me</h2>
-          <p>My name is Nathaniel Barnes.  This is my Ruby on Rails-based custom blogging application.  Welcome!  I am a career software developer who is in the process of learning new and exciting techincal skills with the help of CodeFellows' Ruby on Rails bootcamp.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <!-- Put this into a custom JavaScript file to make things more organized -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-    });
-    </script>
-  </body>
+</body>
 </html>
