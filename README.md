@@ -9,4 +9,4 @@ Technology
 ==========
 This application uses Ruby on Rails as its framework while using Twitter
 Bootstrap for its page layouts, Travis-CI.org for continuous integration, and
-Heroku for its hosting.
+is hosting by Heroku.
