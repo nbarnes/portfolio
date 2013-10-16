@@ -1,6 +1,12 @@
+[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio)
+
 Overview
 ========
-A custom blogging platform developed as part of the CodeFellows Ruby on Rails
-bootcamp.
+A custom website platform developed as part of the CodeFellows Ruby on Rails
+bootcamp.  This web application
 
-[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio)
+Technology
+==========
+This application uses Ruby on Rails as its framework while using Twitter
+Bootstrap for its page layouts, Travis-CI.org for continuous integration, and
+Heroku for its hosting.

@@ -10,9 +10,9 @@ script:
 - bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
 
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: xcRCcUm+z8F57lWd0Guy/DjpeZO++jKCq1gH4V4Iy7oRAHJ4ymccrfiZlebDAu1v2dFoxURJ+S7dqo2716MMYIkkm/F+R0wDVG/PhBDICGlzO2zosUHddmeUlr5vO1Orku8JIp/3nBgOzzESU4iRq+BHf8doCd6qZ+IyWos0Pzo=
-#  app: nbarnes-portfolio
-#  run: "rake db:migrate"
+deploy:
+ provider: heroku
+ api_key:
+   secure: xcRCcUm+z8F57lWd0Guy/DjpeZO++jKCq1gH4V4Iy7oRAHJ4ymccrfiZlebDAu1v2dFoxURJ+S7dqo2716MMYIkkm/F+R0wDVG/PhBDICGlzO2zosUHddmeUlr5vO1Orku8JIp/3nBgOzzESU4iRq+BHf8doCd6qZ+IyWos0Pzo=
+ app: nbarnes-portfolio
+ run: "rake db:migrate"
