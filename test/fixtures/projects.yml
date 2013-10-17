@@ -1,0 +1,12 @@
+
+lol:
+  name: League of Legends
+  technologies_used: Adobe Air C++
+
+ma:
+  name: Maelstrom Angel
+  technologies_used: Simple Directmedia Layer
+
+portfolio:
+  name: Nathaniel's Portfolio
+  technologies_used: Ruby Rails Mac OSX CSS3 HTML5

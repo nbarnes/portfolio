@@ -4,10 +4,7 @@ feature "Editing a post" do
   scenario "Changing the title or body of an existing post" do
 
     # Visit the viewing page for the post
-    visit post_path(posts(:all_things))
-
-    # Click an Edit button to go the Editing interface
-    click_on "Edit"
+    visit edit_post_path(posts(:all_things))
 
     # change the title and/or body
     fill_in "Title", with: "Some things..."
