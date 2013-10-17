@@ -24,6 +24,8 @@ end
 
 group :development, :test do
   gem "minitest-rails"
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 
