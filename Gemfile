@@ -6,8 +6,9 @@ gem 'rails', '3.2.14'
 
 # gem 'sqlite3'
 gem 'pg'
-
 gem 'font-awesome-rails'
+gem 'devise'
+gem "minitest-rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,8 +23,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  # For Heroku
+  gem 'rails_12factor'
+end
+
+
 group :development, :test do
-  gem "minitest-rails"
   gem 'pry-rails'
   gem 'pry-debugger'
 end

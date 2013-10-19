@@ -1,4 +1,6 @@
 Portfolio::Application.routes.draw do
+  devise_for :users
+
   resources :posts, :projects
 
   root :to => 'home#index'
