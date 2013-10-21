@@ -66,7 +66,7 @@ module Portfolio
     config.assets.version = '1.0'
 
     # For Heroku support; via https://devcenter.heroku.com/articles/rails-asset-pipeline
-    config.assets.initialize_on_precompile
+    config.assets.initialize_on_precompile = false
 
     config.generators do |g|
       g.test_framework :mini_test, :spec => true, :fixture => false
