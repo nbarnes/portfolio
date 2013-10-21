@@ -1,23 +1,74 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>A Lightsaber Mind in a .357 World</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>A Lightsaber Mind In A .357 World</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<div class="container">
+  </head>
 
-  <% flash.each do |key, value| %>
-    <div class="<%= flash_class(key) %>">
-      <%= value %>
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">Foxes</li>
+          <li><a href="posts">Blog</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="https://github.com/nbarnes">Github</a></li>
+          <li><a href="projects">Projects</a></li>
+        </ul>
+      </div>
+
+      <!-- Page content -->
+
+      <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+          <%= value %>
+        </div>
+      <% end %>
+
+      <div id="page-content-wrapper">
+        <div class="content-header">
+          <h1>
+            <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+            A Lightsaber Mind In A .357 World
+          </h1>
+        </div>
+        <!-- Keep all page content within the page-content inset div! -->
+
+            <%= yield %>
+
+      </div>
     </div>
-  <% end %>
 
-  <%= yield %>
-</div>
-
-</body>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Put this into a custom JavaScript file to make things more organized -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+    </script>
+  </body>
 </html>
