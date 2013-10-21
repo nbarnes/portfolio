@@ -1,15 +1,17 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 script:
-  - psql -c 'create database test_postgres;' -U postgres
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rake
+- psql -c 'create database test_postgres;' -U postgres
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
 
-# deploy:
-#   provider: heroku
-#   api_key:
-#     secure: xcRCcUm+z8F57lWd0Guy/DjpeZO++jKCq1gH4V4Iy7oRAHJ4ymccrfiZlebDAu1v2dFoxURJ+S7dqo2716MMYIkkm/F+R0wDVG/PhBDICGlzO2zosUHddmeUlr5vO1Orku8JIp/3nBgOzzESU4iRq+BHf8doCd6qZ+IyWos0Pzo=
-#   app: nbarnes-portfolio
+deploy:
+  provider: heroku
+  api_key:
+    secure: n5tH2w6kQuRpEftwplUMToV69FYQjyIBdpr55R6Z0YTKMXfXf/LbBM/hQeu79PPLLQvN+93K1xF/D144wMZGe8bIYTarWZ7TJbb4xFfj64zBCQsDqB1zyhcfO4a2fviDfVorU2cixvVVrTpnGNzGXbNlwSup+Nh6b5SMjvhb8s8=
+  app: nbarnes
+  on:
+    repo: nbarnes/Portfolio
