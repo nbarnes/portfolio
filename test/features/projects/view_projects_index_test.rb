@@ -12,4 +12,13 @@ feature "visiting the projects index" do
     page.wont_have_content "Parsing HTML with regex"
 
   end
+
+  scenario "Visiting projects index from new project page" do
+
+    visit new_project_path
+    click_on "Projects"
+
+    page.must_have_content "Create New Project"
+  end
+
 end
