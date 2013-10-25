@@ -1,15 +1,19 @@
 all_things:
   title: All things...
   content: Change in their way.
+  author: mal
 
 sic_transit:
   title: Sic transit...
   content: Gloria mundi.
+  author: agent
 
 let_there_be:
   title: Let there be a blog post...
   content: And we saw the post was good.
+  author: kaylee
 
 GBob:
   title: Guardsman Bob
   content: Keeps his cool.
+  author: kaylee

@@ -3,6 +3,10 @@ require "test_helper"
 feature "Editing a post" do
   scenario "Changing the title or body of an existing post" do
 
+    # Have to sign in before we can edit a post
+    sign_in
+    # end sign in
+
     # Visit the viewing page for the post
     visit edit_post_path(posts(:all_things))
 
