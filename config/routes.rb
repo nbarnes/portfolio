@@ -1,7 +1,13 @@
 Portfolio::Application.routes.draw do
   devise_for :users
 
-  resources :posts, :projects
+  resources :posts do
+    member do
+      put 'toggle_published'
+    end
+  end
+
+  resources :projects
 
   root :to => 'home#index'
 

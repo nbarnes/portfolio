@@ -10,8 +10,8 @@ feature "Auth::SignOut" do
     page.must_have_content "Password"
     page.must_have_content "Remember me"
 
-    fill_in "Email", with: users(:kaylee).email
-    fill_in "Password", with: "strawberry"
+    fill_in "Email", with: users(:author02).email
+    fill_in "Password", with: "author02"
 
     click_button "Sign in"
 

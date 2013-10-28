@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
 
-  # restricts show, create, update, edit, and destroy to signed in users
+  # restricts create, update, edit, and destroy to signed in users
   before_filter :authenticate_user!, except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = policy_scope(Post)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +29,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
+    authorize @post
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,12 +40,14 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    authorize @post
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    authorize @post
 
     respond_to do |format|
       if @post.save
@@ -62,6 +65,7 @@ class PostsController < ApplicationController
   # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
+    authorize @post
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
@@ -78,6 +82,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
+    authorize @post
     @post.destroy
 
     respond_to do |format|
@@ -85,4 +90,14 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def toggle_published
+    @post = Post.find(params[:id])
+    authorize @post
+
+    @post.update_attributes(published: !@post.published)
+
+    redirect_to posts_path
+  end
+
 end

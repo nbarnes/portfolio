@@ -4,22 +4,42 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
+    <th>Author</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @posts.each do |post| %>
-  <tr>
+  <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
     <td><%= post.content %></td>
+    <td><%= post.author.email %></td>
     <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if policy(post).update? %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <% end %>
+
+    <% if policy(post).destroy? %>
+      <td>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    <% end %>
+
+    <% if policy(post).toggle_published? %>
+      <% if post.published? %>
+        <td><%= link_to 'Unpublish', toggle_published_post_path(post), {method: :put} %></td>
+      <% else %>
+        <td><%= link_to 'Publish', toggle_published_post_path(post), {method: :put} %></td>
+      <% end %>
+    <% end %>
+
   </tr>
 <% end %>
+
 </table>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path if policy(Post).create? %>

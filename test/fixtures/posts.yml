@@ -1,19 +1,47 @@
-all_things:
-  title: All things...
-  content: Change in their way.
-  author: mal
+editor01_published:
+  title: e01_title_publed
+  content: 01_content_publed
+  author: editor01
+  published: true
 
-sic_transit:
-  title: Sic transit...
-  content: Gloria mundi.
-  author: agent
+editor01_unpublished:
+  title: e01_title_unpubled
+  content: 01_content_unpubled
+  author: editor01
+  published: false
 
-let_there_be:
-  title: Let there be a blog post...
-  content: And we saw the post was good.
-  author: kaylee
+editor02_published:
+  title: e02_title_publed
+  content: 02_content_publed
+  author: editor02
+  published: true
 
-GBob:
-  title: Guardsman Bob
-  content: Keeps his cool.
-  author: kaylee
+editor02_unpublished:
+  title: e02_title_unpubled
+  content: 02_content_unpubled
+  author: editor02
+  published: false
+
+author01_published:
+  title: a01_title_publed
+  content: a01_content_publed
+  author: author01
+  published: true
+
+author01_unpublished:
+  title: a01_title_unpubled
+  content: a01_content_unpubled
+  author: author01
+  published: false
+
+author02_published:
+  title: a02_title_publed
+  content: a02_content_publed
+  author: author02
+  published: true
+
+author02_unpublished:
+  title: a02_title_unpubled
+  content: a02_content_unpubled
+  author: author02
+  published: false

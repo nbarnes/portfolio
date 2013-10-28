@@ -10,6 +10,7 @@ gem 'pg'
 gem 'font-awesome-rails'
 gem 'devise'
 gem "minitest-rails"
+gem 'pundit'
 
 # Gems used only for assets and not required
 # in production environments by default.

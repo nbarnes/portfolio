@@ -8,8 +8,8 @@ feature "Auth::SignIn" do
     page.must_have_content "Password"
     page.must_have_content "Remember me"
 
-    fill_in "Email", with: users(:agent).email
-    fill_in "Password", with: "abetterworld"
+    fill_in "Email", with: users(:editor02).email
+    fill_in "Password", with: "editor02"
 
     click_button "Sign in"
 
