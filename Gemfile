@@ -39,6 +39,7 @@ end
 group :test do
   gem "minitest-rails-capybara"
   gem "turn"
+  gem "simplecov"
 end
 
 gem 'jquery-rails'
