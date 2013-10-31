@@ -11,7 +11,7 @@ feature "Editor can delete a post" do
 
     # Click an Delete button to trigger deletion
 
-    page.find(:xpath, '//*[@id="post_29671778"]').click_on('Destroy')
+    page.find(:xpath, '//*[@id="post_29671778"]').click_on('Delete Post')
 
     # No more post
     page.wont_have_content posts(:author02_unpublished).content
