@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%= render "shared/post_display" %>
+
+<% @post.comments.each do |comment| %>
+  <b>Comment:</b>
+  <%= comment.content %><br />&nbsp&nbsp&nbsp&nbsp
+  <%= " - #{ comment.author_email }" %>
+  <br /><br />
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', @post %>

@@ -1,7 +1,9 @@
 Portfolio::Application.routes.draw do
+
   devise_for :users
 
   resources :posts do
+    resources :comments
     member do
       put 'toggle_published'
     end
@@ -10,6 +12,8 @@ Portfolio::Application.routes.draw do
   resources :projects
 
   root :to => 'home#index'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

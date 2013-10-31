@@ -25,6 +25,12 @@ class PostsController < ApplicationController
     end
   end
 
+  # GET /posts/1/edit
+  def edit
+    @post = Post.find(params[:id])
+    authorize @post
+  end
+
   # GET /posts/new
   # GET /posts/new.json
   def new
@@ -35,12 +41,6 @@ class PostsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @post }
     end
-  end
-
-  # GET /posts/1/edit
-  def edit
-    @post = Post.find(params[:id])
-    authorize @post
   end
 
   # POST /posts
