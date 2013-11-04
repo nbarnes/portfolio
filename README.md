@@ -11,6 +11,10 @@ This application uses Ruby on Rails as its framework while using Twitter
 Bootstrap for its page layouts, Travis-CI.org for continuous integration, and
 is hosting by Heroku.
 
+Licence
+=======
+MIT
+
 TODO LIST FOR README
 ==========
 - what does this portfolio do?  or track?   or show?
