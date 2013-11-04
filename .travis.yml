@@ -15,3 +15,6 @@ deploy:
   app: nbarnes
   on:
     repo: nbarnes/Portfolio
+  run:
+    - rake db:migrate
+    - rake db:fixtures:load
