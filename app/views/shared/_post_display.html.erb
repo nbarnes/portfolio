@@ -1,16 +1,16 @@
-<p>
+<p id="post_title-<%= dom_id(post) %>">
   <b>Post Title:</b>
-  <%= @post.title %>
+  <%= post.title %>
 </p>
-
-<p>
+<br />
+<p id="post_content-<%= dom_id(post) %>">
   <b>Post Content:</b>
-  <%= @post.content %>
+  <%= post.content %>
 </p>
 
-<p id="author">
+<p id="post_author-<%= dom_id(post) %>">
   <b>Post By:</b>
-  <%= @post.author.email %>
+  <%= post.author.email %>
 </p>
 
 <br />

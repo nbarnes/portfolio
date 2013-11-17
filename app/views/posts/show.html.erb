@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= render "shared/post_display" %>
+<%= render partial: "shared/post_display", locals: {post: @post} %>
 
 <% @post.comments.each do |comment| %>
 

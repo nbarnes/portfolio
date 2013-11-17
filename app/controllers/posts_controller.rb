@@ -14,6 +14,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def display
+    @posts = policy_scope(Post)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+    end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show

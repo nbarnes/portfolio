@@ -7,6 +7,9 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
 
+require "capybara/webkit"
+Capybara.javascript_driver = :webkit
+
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
 # require "minitest/rails/capybara"

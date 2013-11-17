@@ -11,7 +11,7 @@ Portfolio::Application.routes.draw do
 
   resources :projects
 
-  root :to => 'posts#index'
+  root :to => 'posts#display'
 
 
 

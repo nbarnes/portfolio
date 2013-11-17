@@ -1,13 +1,16 @@
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>
+    &nbsp<font color="White">Signed in as:
+    &nbsp<%= current_user.email %></font>
+    &nbsp
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %> or
     <%= link_to "Sign in", new_user_session_path %>
   <% end %>
 </div>
+<br />
 
 <li><%= link_to 'Blog', posts_path %></li>
 <li><a href="http://www.linkedin.com/pub/nathaniel-barnes/8/b88/a6a/">LinkedIn</a></li>
