@@ -10,6 +10,6 @@
  *
  *= require_self
  *= require load_bootstrap
- *= require_tree .
  *= require font-awesome
+ *= require_tree .
  */
