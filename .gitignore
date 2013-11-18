@@ -14,9 +14,11 @@
 /log/*.log
 /tmp
 
-.DS_Store
+/.DS_Store
 /*/.DS_Store
-.app/.DD_Store
-.app/assets/.DS_Store
+/*/*/.DS_Store
+/*/*/*/.DS_Store
+
+/app/.DS_Store
 
 /coverage/*
