@@ -14,7 +14,7 @@
 <% @posts.each do |post| %>
   <tr id="<%= dom_id(post) %>">
     <td><%= post.title %></td>
-    <td><%= post.content %></td>
+    <td><%= truncate(post.content, length: 70, separator: ' ') %></td>
     <td><%= post.author.email %></td>
     <td><%= " - " %><%= link_to 'Show', post %></td>
     <% if policy(post).update? %>

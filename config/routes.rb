@@ -2,6 +2,8 @@ Portfolio::Application.routes.draw do
 
   devise_for :users
 
+  get 'posts/display'
+
   resources :posts do
     resources :comments
     member do
@@ -12,8 +14,6 @@ Portfolio::Application.routes.draw do
   resources :projects
 
   root :to => 'posts#display'
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

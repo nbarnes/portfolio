@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   # restricts create, update, edit, and destroy to signed in users
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show, :display]
 
   # GET /posts
   # GET /posts.json
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @posts = policy_scope(Post)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # display.html.erb
       format.json { render json: @posts }
     end
   end

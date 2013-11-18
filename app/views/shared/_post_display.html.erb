@@ -1,12 +1,14 @@
-<p id="post_title-<%= dom_id(post) %>">
-  <b>Post Title:</b>
-  <%= post.title %>
-</p>
-<br />
-<p id="post_content-<%= dom_id(post) %>">
-  <b>Post Content:</b>
-  <%= post.content %>
-</p>
+<style>
+  p {width:600px}
+</style>
+
+<div id="post_title-<%= dom_id(post) %>">
+  <h4><%= post.title %></h4>
+</div>
+
+<div id="post_content-<%= dom_id(post) %>" >
+  <p><%= post.content %>
+</div>
 
 <p id="post_author-<%= dom_id(post) %>">
   <b>Post By:</b>
