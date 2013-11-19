@@ -28,6 +28,7 @@ end
 group :production do
   # For Heroku
   gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end
 
 
