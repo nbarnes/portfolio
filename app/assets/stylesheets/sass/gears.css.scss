@@ -1,0 +1,21 @@
+
+.gear {
+  height: 60px;
+  width: 60px;
+}
+
+.gear_up_left {
+  @extend .gear;
+  position: fixed;
+  left: 38px;
+  top: 1px;
+  z-index: -1;
+}
+
+.gear_down_right {
+  @extend .gear;
+  position: fixed;
+  left: 1px;
+  top: 39px;
+  z-index: -1;
+}

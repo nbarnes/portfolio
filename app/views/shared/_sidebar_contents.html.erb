@@ -1,19 +1,27 @@
 
-<div id="user_nav">
-  <% if user_signed_in? %>
-    &nbsp<font color="White">Signed in as:
-    &nbsp<%= current_user.email %></font>
-    &nbsp
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or
-    <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
-</div>
-<br />
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
 
-<li><%= link_to 'Blog', posts_display_path %></li>
-<li><%= link_to 'Projects', projects_path %></li>
-<li><a href="http://www.linkedin.com/pub/nathaniel-barnes/8/b88/a6a/">LinkedIn</a></li>
-<li><a href="https://github.com/nbarnes">Github</a></li>
-<li><a href="https://twitter.com/FoxBarnes">Twitter</a></li>
+    <script>
+      $(window).scroll(function() {
+        var theta = $(window).scrollTop() % Math.PI;
+        $('.counterclockwise_spin').css({ transform: 'rotate(' + (theta * 256) + 'rad)' });
+      });
+
+      $(window).scroll(function() {
+        var theta = $(window).scrollTop() % Math.PI;
+        $('.clockwise_spin').css({ transform: 'rotate(' + (-theta * 256) + 'rad)' });
+      });
+    </script>
+
+    <%= image_tag "gear.png", class: "gear_up_left counterclockwise_spin" %>
+    <%= image_tag "gear.png", class: "gear_down_right clockwise_spin" %>
+
+    <li><%= link_to 'Blog', posts_display_path %></li>
+    <li><%= link_to 'Projects', projects_path %></li>
+    <li><a href="http://www.linkedin.com/in/nbarnes2">LinkedIn</a></li>
+    <li><a href="https://github.com/nbarnes">Github</a></li>
+    <li><a href="https://twitter.com/FoxBarnes">Twitter</a></li>
+
+  </ul>
+</div>
