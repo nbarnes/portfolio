@@ -11,10 +11,11 @@ bundler_args: --binstubs=./bundler_stubs
 deploy:
   provider: heroku
   api_key:
-    secure: "RmkPMVb3DrYcRpx/sqZfGJjveENwItPPal4ZM3ayranx4Q3mzsMiPIeXvmCr+ZZAblX08HLTKb30IfyBVeJT45mV4/p/44W82lV0w8sjgHlFwCtzGVIlXldHSqaKPO+65cWniVXV+ZqkCRv3RuliT0zkxTMWmKgJ+b+dU5ZPylA="
+    secure: M+CeHYt8wC87PKH/vk4eBe6q4fvFSerqT121QnjnFIJKioGePVqKYalhteulAadpRIFMOvu3T3L5fS8mlCCCOu1UdziGDp3KTbQs+P4MLcWnLS9kQQ2I42B2fieaRjz8oTPR88j3ypW9cRvlo1sTEHWtT3Z5jVFw/Mwp8kbydqA=
   app: nbarnes
   on:
     repo: nbarnes/Portfolio
   run:
     - "rake db:migrate"
     - "rake db:fixtures:load"
+
