@@ -1,59 +1,19 @@
 comment01:
   content: comment01_body
-  author_email: author01_email
-  post: author01_published
+  author_email: fox
+  post: post1
 
 comment02:
   content: comment02_body
-  author_email: author02_email
-  post: author01_published
+  author_email: fox
+  post: post3
 
 comment03:
   content: comment03_body
-  author_email: editor01_email
-  post: author01_published
+  author_email: fox
+  post: post1
 
 comment04:
   content: comment04_body
-  author_email: author01_email
-  post: author02_published
-
-comment05:
-  content: comment05_body
-  author_email: author02_email
-  post: author02_published
-
-comment06:
-  content: comment06_body
-  author_email: editor03_email
-  post: author02_published
-
-comment07:
-  content: comment07_body
-  author_email: editor01_email
-  post: editor01_published
-
-comment08:
-  content: comment08_body
-  author_email: editor02_email
-  post: editor01_published
-
-comment09:
-  content: comment09_body
-  author_email: editor02_email
-  post: editor01_published
-
-comment10:
-  content: comment10_body
-  author_email: editor01_email
-  post: editor02_published
-
-comment11:
-  content: comment11_body
-  author_email: editor02_email
-  post: editor02_published
-
-comment12:
-  content: comment12_body
-  author_email: editor02_email
-  post: editor02_published
+  author_email: fox
+  post: post3

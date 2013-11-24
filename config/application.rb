@@ -72,6 +72,8 @@ module Portfolio
       g.test_framework :mini_test, :spec => true, :fixture => false
     end
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
 
   end
 end

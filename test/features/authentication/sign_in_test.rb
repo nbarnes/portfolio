@@ -1,15 +1,15 @@
 require "test_helper"
 
-feature "Auth::SignIn" do
+feature "Authentication::SignIn" do
   scenario "User can sign in" do
-    visit user_session_path
+
+    visit new_user_session_path
 
     page.must_have_content "Email"
     page.must_have_content "Password"
-    page.must_have_content "Remember me"
 
-    fill_in "Email", with: users(:editor02).email
-    fill_in "Password", with: "editor02"
+    fill_in "Email", with: users(:fox).email
+    fill_in "Password", with: "foxbarnes"
 
     click_button "Sign in"
 
@@ -17,5 +17,4 @@ feature "Auth::SignIn" do
     page.wont_have_content "Invalid email or password"
 
   end
-
 end

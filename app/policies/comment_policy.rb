@@ -17,7 +17,7 @@ class CommentPolicy < ApplicationPolicy
 
   Scope = Struct.new(:user, :scope) do
     def resolve
-      if user && user.editor?
+      if user && ( user.editor? || user.admin? )
         scope.all
       else
         scope.where(:published => true)

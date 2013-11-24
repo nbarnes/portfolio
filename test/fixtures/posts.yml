@@ -1,47 +1,19 @@
-editor01_published:
-  title: e01_title_publed
-  content: 01_content_publed
-  author: editor01
+post1:
+  title: post1_title
+  content: Ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate. Congue nihil imperdiet doming id quod mazim placerat. Soluta nobis eleifend; option facer possim assum typi non habent claritatem. In vulputate velit esse molestie consequat vel illum dolore eu feugiat nulla facilisis at. Nonummy nibh euismod, tincidunt ut laoreet dolore magna aliquam erat. Hendrerit vero eros et accumsan et iusto odio dignissim. Minim veniam quis nostrud exerci tation ullamcorper suscipit lobortis. Gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per. Claritatem Investigationes demonstraverunt; lectores legere me lius quod? Etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum mirum est notare quam littera. Nobis eleifend option congue nihil imperdiet doming id quod mazim!
+
+  author: fox
   published: true
 
-editor01_unpublished:
-  title: e01_title_unpubled
-  content: 01_content_unpubled
-  author: editor01
+post2:
+  title: post2_title
+  content: Ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper suscipit. In hendrerit in vulputate velit esse molestie consequat vel illum dolore eu feugiat? Claritatem Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam. Imperdiet doming id quod mazim placerat facer possim? Diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat lobortis nisl ut! Option congue nihil assum, typi non habent claritatem. Anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima eodem. Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud? Et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Facilisi nam liber tempor cum soluta nobis, eleifend option congue. Nibh euismod tincidunt ut exerci tation ullamcorper suscipit lobortis? Diam nonummy nisl ut aliquip ex ea commodo consequat duis autem vel. Littera gothica quam, nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula? Sed eum iriure dolor in hendrerit in vulputate! Velit esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros dolore!
+
+  author: fox
   published: false
 
-editor02_published:
-  title: e02_title_publed
-  content: 02_content_publed
-  author: editor02
+post3:
+  title: post3_title
+  content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.
+  author: fox
   published: true
-
-editor02_unpublished:
-  title: e02_title_unpubled
-  content: 02_content_unpubled
-  author: editor02
-  published: false
-
-author01_published:
-  title: a01_title_publed
-  content: a01_content_publed
-  author: author01
-  published: true
-
-author01_unpublished:
-  title: a01_title_unpubled
-  content: a01_content_unpubled
-  author: author01
-  published: false
-
-author02_published:
-  title: a02_title_publed
-  content: a02_content_publed
-  author: author02
-  published: true
-
-author02_unpublished:
-  title: a02_title_unpubled
-  content: a02_content_unpubled
-  author: author02
-  published: false

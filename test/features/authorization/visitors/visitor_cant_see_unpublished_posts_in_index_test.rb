@@ -1,17 +1,14 @@
 require "test_helper"
 
 feature "Visitors can't see unpublished posts" do
-  scenario "Visitor can't see unpublished posts in the posts index" do
+  scenario "Visitor can't see unpublished posts in the posts display" do
 
-    visit posts_path
+    visit posts_display_path
 
-    # Verify that we're not signed in
-    page.wont_have_content "Sign out"
+    page.must_have_content posts(:post1).content
+    page.must_have_content posts(:post3).content
 
-    page.must_have_content posts(:editor01_published).content
-    page.must_have_content posts(:author01_published).content
-    page.wont_have_content posts(:editor01_unpublished).content
-    page.wont_have_content posts(:author01_unpublished).content
+    page.wont_have_content posts(:post2).content
 
   end
 end

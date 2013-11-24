@@ -1,17 +1,21 @@
 require "test_helper"
 
-feature "Auth::SignOut" do
-  scenario "User can sign in and then sign out" do
-    visit user_session_path
+feature "Authentication::SignOut" do
 
-    page.must_have_content "Sign in"
+  scenario "User can sign in and then sign out" do
+    visit posts_display_path
+
+    page.wont_have_content "Sign in"
+    page.wont_have_content "Sign out"
+
+    visit new_user_session_path
 
     page.must_have_content "Email"
     page.must_have_content "Password"
     page.must_have_content "Remember me"
 
-    fill_in "Email", with: users(:author02).email
-    fill_in "Password", with: "author02"
+    fill_in "Email", with: users(:fox).email
+    fill_in "Password", with: "foxbarnes"
 
     click_button "Sign in"
 

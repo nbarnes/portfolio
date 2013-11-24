@@ -23,5 +23,13 @@
     <li><a href="https://github.com/nbarnes">Github</a></li>
     <li><a href="https://twitter.com/FoxBarnes">Twitter</a></li>
 
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        &nbsp&nbsp<font color="White">Signed in</font>
+        <br />
+        &nbsp&nbsp<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>
+
   </ul>
 </div>

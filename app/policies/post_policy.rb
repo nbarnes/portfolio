@@ -6,11 +6,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    @user && (@user.editor? || @user.author?)
+    @user && (@user.editor? || @user.author? || @user.admin?)
   end
 
   def edit?
-    @user && (@user.editor? || (@post.author == @user))
+    @user && (@user.editor? || @user.admin? || (@post.author == @user))
   end
 
   def update?
@@ -18,11 +18,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def toggle_published?
-    @user && (@user.editor?)
+    @user && (@user.editor? || @user.admin?)
   end
 
   def destroy?
-    @user && (@user.editor?)
+    @user && (@user.editor? || @user.admin?)
   end
 
   def new?
@@ -35,7 +35,7 @@ class PostPolicy < ApplicationPolicy
 
   Scope = Struct.new(:user, :scope) do
     def resolve
-      if user && user.editor?
+      if user && ( user.editor? || user.admin? )
         scope.all
       elsif user && user.author?
         scope.where("published = true or author_id = ?", user.id)
