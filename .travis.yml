@@ -17,3 +17,4 @@ deploy:
     repo: nbarnes/Portfolio
   run:
     - "rake db:migrate"
+    - "rake db:fixtures:load"
