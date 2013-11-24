@@ -376,6 +376,14 @@
         1,
         null
       ],
+      "/Users/fox/projects/Portfolio/app/controllers/static_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/fox/projects/Portfolio/app/policies/application_policy.rb": [
         1,
         1,
@@ -500,6 +508,6 @@
         null
       ]
     },
-    "timestamp": 1385259028
+    "timestamp": 1385273866
   }
 }

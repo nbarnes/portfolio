@@ -22,3 +22,6 @@
 /app/.DS_Store
 
 /coverage/*
+
+# Ignore application configuration
+/config/application.yml
