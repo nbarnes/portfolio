@@ -1,4 +1,4 @@
-  language: ruby
+language: ruby
 rvm:
 - 2.0.0
 script:
@@ -11,7 +11,7 @@ bundler_args: --binstubs=./bundler_stubs
 deploy:
   provider: heroku
   api_key:
-    secure: n5tH2w6kQuRpEftwplUMToV69FYQjyIBdpr55R6Z0YTKMXfXf/LbBM/hQeu79PPLLQvN+93K1xF/D144wMZGe8bIYTarWZ7TJbb4xFfj64zBCQsDqB1zyhcfO4a2fviDfVorU2cixvVVrTpnGNzGXbNlwSup+Nh6b5SMjvhb8s8=
+    secure: "RmkPMVb3DrYcRpx/sqZfGJjveENwItPPal4ZM3ayranx4Q3mzsMiPIeXvmCr+ZZAblX08HLTKb30IfyBVeJT45mV4/p/44W82lV0w8sjgHlFwCtzGVIlXldHSqaKPO+65cWniVXV+ZqkCRv3RuliT0zkxTMWmKgJ+b+dU5ZPylA="
   app: nbarnes
   on:
     repo: nbarnes/Portfolio
