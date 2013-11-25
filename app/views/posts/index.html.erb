@@ -16,7 +16,7 @@
     <td><%= post.title %></td>
     <td><%= truncate(post.content, length: 70, separator: ' ') %></td>
     <td><%= post.author.email %></td>
-    <td><%= post.created_at %></td>
+    <td><%= post.created_at.to_date %></td>
     <td><%= " - " %><%= link_to 'Show', post %></td>
     <% if policy(post).update? %>
       <td><%= " - " %><%= link_to 'Edit', edit_post_path(post) %></td>
