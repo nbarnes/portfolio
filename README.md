@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio)
+[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio) [![Code Climate](https://codeclimate.com/github/nbarnes/Portfolio.png)](https://codeclimate.com/github/nbarnes/Portfolio)
 
 Overview
 ========
