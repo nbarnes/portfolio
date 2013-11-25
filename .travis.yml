@@ -7,15 +7,10 @@ script:
 - bundle exec rake db:test:prepare
 - bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
-
 deploy:
   provider: heroku
   api_key:
-    secure: M+CeHYt8wC87PKH/vk4eBe6q4fvFSerqT121QnjnFIJKioGePVqKYalhteulAadpRIFMOvu3T3L5fS8mlCCCOu1UdziGDp3KTbQs+P4MLcWnLS9kQQ2I42B2fieaRjz8oTPR88j3ypW9cRvlo1sTEHWtT3Z5jVFw/Mwp8kbydqA=
+    secure: dJorqYFF62fkQHnqQrU/tWRhdzBB3Zji4QGEhtln1ddAQL/k/hi1u/k18MtLYOdXm926DewAGb4iER5495C426vNBsIVqKR9z9vdecqnJAZqD3pIWpmLE1H03yqhZcXKRXT3HvX+3G0woKSi9RGQGj5CgOohjBQMH81fj7rgwWY=
   app: nbarnes
   on:
     repo: nbarnes/Portfolio
-  run:
-    - "rake db:migrate"
-    - "rake db:fixtures:load"
-
