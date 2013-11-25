@@ -12,6 +12,9 @@ feature "Timestamps on posts" do
   end
 
   scenario "Timestamps appear on posts in the posts index" do
+    sign_in_fox
+    visit posts_path
+    page.must_have_content "Date Posted"
   end
 
 
