@@ -2,23 +2,11 @@
 <div id="sidebar-wrapper">
   <ul class="sidebar-nav">
 
-    <script>
-      $(window).scroll(function() {
-        var theta = $(window).scrollTop() % Math.PI;
-        $('.counterclockwise_spin').css({ transform: 'rotate(' + (theta * 256) + 'rad)' });
-      });
-
-      $(window).scroll(function() {
-        var theta = $(window).scrollTop() % Math.PI;
-        $('.clockwise_spin').css({ transform: 'rotate(' + (-theta * 256) + 'rad)' });
-      });
-    </script>
-
     <%= image_tag "gear.png", class: "gear_up_left counterclockwise_spin" %>
     <%= image_tag "gear.png", class: "gear_down_right clockwise_spin" %>
 
     <li><%= link_to 'Blog', posts_display_path %></li>
-    <li><%= link_to 'Projects', projects_path %></li>
+    <li><%= link_to 'Portfolio', projects_path %></li>
     <li><a href="http://www.linkedin.com/in/nbarnes2">LinkedIn</a></li>
     <li><a href="https://github.com/nbarnes">Github</a></li>
     <li><a href="https://twitter.com/FoxBarnes">Twitter</a></li>
@@ -26,7 +14,7 @@
 
     <div id="user_nav">
       <% if user_signed_in? %>
-        &nbsp&nbsp<font color="Red">Signed in</font>\<br />
+        &nbsp&nbsp<span class="signed_in_label">Signed in</span><br />
 
         <li><%= link_to 'Blog index', posts_path %></li>
         <li><%= link_to "New post", new_post_path %></li>

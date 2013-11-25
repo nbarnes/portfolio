@@ -1,9 +1,10 @@
-<style>
-  p {width:600px}
-</style>
+
 <div id="<%= dom_id(post) %>" class="blog_post">
   <div id="<%= dom_id(post) %>-title" class="post_title">
     <h4><%= post.title %></h4>
+      <% if !post.published? %>
+        <span class="unpublished_label"> - Unpublished</panel>
+      <% end %>
   </div>
 
   <div id="<%= dom_id(post) %>-content" class="post_content">
@@ -11,7 +12,7 @@
   </div>
 
   <p id="<%= dom_id(post) %>-author" class="post_author">
-    <b>Posted By:</b> <%= post.author.email %><span id="post_timestamp"> on <%= post.created_at.strftime("%a, the #{post.created_at.day.ordinalize} of %B, %Y")  %></span>
+    <b>Posted By:</b> <%= post.author.email %><span id="post_timestamp"> on <%= post.created_at.strftime("%A, the #{post.created_at.day.ordinalize} of %B, %Y")  %></span>
   </p>
 
   <br />

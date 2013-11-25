@@ -7,10 +7,15 @@
 .gear_up_left {
   @extend .gear;
   position: fixed;
-  left: 38px;
+  left: 37px;
   top: 1px;
   z-index: -1;
 }
+
+// can I just put a css transform into one of these instead of having a
+// run-at-page-load javascript do it once?
+// UPDATE: Can't do it 'cause different browsers use different syntax
+// for CSS transforms.  Gotta do it via jQuery for browser agnosticism.
 
 .gear_down_right {
   @extend .gear;

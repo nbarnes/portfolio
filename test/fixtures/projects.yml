@@ -1,12 +1,12 @@
 
-lol:
-  name: League of Legends
-  technologies_used: Adobe Air C++
-
-ma:
-  name: Maelstrom Angel
-  technologies_used: Simple Directmedia Layer
-
 portfolio:
-  name: Nathaniel's Portfolio
-  technologies_used: Ruby Rails Mac OSX CSS3 HTML5
+  name: Portfolio Platform
+  technologies_used: Ruby Rails CSS3 HTML5 Javascript jQuery
+
+trakehner_db:
+  name: Unofficial Trakehner Database
+  technologies_used: Ruby Rails CSS3 HTML5 Javascript jQuery
+
+cpu_analyst:
+  name: Firefall CPU Analyst
+  technologies_used: Ruby
