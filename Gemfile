@@ -28,6 +28,12 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development do
+  gem 'brakeman', :require => false
+  gem "rails_best_practices"
+end
+
+
 
 group :development, :test do
   gem 'pry-rails'
