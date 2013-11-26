@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio) [![Code Climate](https://codeclimate.com/github/nbarnes/Portfolio.png)](https://codeclimate.com/github/nbarnes/Portfolio)
-
 Overview
 ========
 This project is a custom blogging platform. The live deployment of this
