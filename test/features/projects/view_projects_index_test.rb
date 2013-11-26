@@ -6,9 +6,8 @@ feature "visiting the projects index" do
 
     visit projects_path
 
-    page.must_have_content "League of Legends"
-    page.must_have_content "Adobe Air C++"
-    page.must_have_content "Maelstrom Angel"
+    page.must_have_content "Portfolio Platform"
+    page.must_have_content "Ruby Rails CSS3 HTML5 Javascript jQuery"
     page.wont_have_content "Parsing HTML with regex"
 
   end
@@ -16,7 +15,7 @@ feature "visiting the projects index" do
   scenario "Visiting projects index from new project page" do
 
     visit new_project_path
-    click_on "Projects"
+    click_on "Portfolio"
 
     page.must_have_content "Create New Project"
   end

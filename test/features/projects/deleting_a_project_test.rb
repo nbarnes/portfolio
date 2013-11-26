@@ -3,7 +3,7 @@ require "test_helper"
 feature "Deleting a project" do
   scenario "Deleting an existing project" do
 
-    project = projects(:ma)
+    project = projects(:trakehner_db)
 
     visit projects_path
 
