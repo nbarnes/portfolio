@@ -10,8 +10,9 @@ This blogging platform was developed as part of my participation in
 the CodeFellows' Ruby on Rails bootcamp during October and November 2013. It
 forms a major part of the professional portfolio that I developed during my
 time with CodeFellows, showing off my skills with Ruby on Rails and other
-technologies used in its development.  It also hosts my tech blog at
-http://alightsabermind.com, where I keep my tech blog.
+technologies used in its development.  It also hosts my blog at
+http://alightsabermind.com, where I post on technical topics and my
+experiences as a software developer.
 
 Technology
 ==========
@@ -32,7 +33,7 @@ About The Developer
 My name is Nathaniel Barnes.  I am a software developer living in Seattle, WA.
 I can be reached at nbarnes@gmail.com.   My GitHub repository is at
 https://github.com/nbarnes/ and my LinkedIn profile is at
-http://www.linkedin.com/pub/nathaniel-barnes/8/b88/a6a
+http://www.linkedin.com/in/nbarnes2
 
 License
 =======
