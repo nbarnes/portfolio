@@ -3,7 +3,6 @@
 <%= render partial: "shared/post_display", locals: {post: @post} %>
 
 <% @post.comments.each do |comment| %>
-
   <div id="<%= dom_id(comment) %>">
     <b>Comment:</b>
     <%= comment.content %><br />&nbsp&nbsp&nbsp&nbsp
