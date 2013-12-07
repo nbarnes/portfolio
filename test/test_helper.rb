@@ -14,7 +14,7 @@ require 'coveralls'
 # Uncomment for awesome colorful output
 require "minitest/pride"
 
-Coveralls.wear!
+Coveralls.wear!('rails')
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
