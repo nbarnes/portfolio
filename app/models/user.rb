@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :posts, foreign_key: "author_id"
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name
 
   def editor?
     role == 'editor'
@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 
   private
   def set_default_role
-    self.role ||= Role.find_by_name('visitor')
+    self.role ||= self.role = 'visitor'
   end
 
   # Start code from https://gist.github.com/ivanoats/7076128
