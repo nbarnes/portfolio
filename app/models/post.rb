@@ -8,6 +8,6 @@ class Post < ActiveRecord::Base
   validates :content, length: { in: 4..20000 }
 
   belongs_to :author, class_name: "User"
-  has_many :comments, dependent: :destroy
+  has_many :comments, dependent: :destroy, as: :commentable
 
 end

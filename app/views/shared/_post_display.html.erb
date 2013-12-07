@@ -1,4 +1,5 @@
 
+<% @commentable ? post = @commentable : nil %>
 <div id="<%= dom_id(post) %>" class="blog_post">
   <div id="<%= dom_id(post) %>-title" class="post_title">
     <h4><%= post.title %></h4>

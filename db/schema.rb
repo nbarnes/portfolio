@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131207003217) do
+ActiveRecord::Schema.define(:version => 20131207010631) do
 
   create_table "comments", :force => true do |t|
     t.string   "author"
@@ -22,12 +22,13 @@ ActiveRecord::Schema.define(:version => 20131207003217) do
     t.string   "referrer"
     t.text     "content"
     t.boolean  "approved"
-    t.integer  "post_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
   end
 
-  add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
+  add_index "comments", ["commentable_id", "commentable_type"], :name => "index_comments_on_commentable_id_and_commentable_type"
 
   create_table "posts", :force => true do |t|
     t.string   "title"
