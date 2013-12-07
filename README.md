@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio) [![Code Climate](https://codeclimate.com/github/nbarnes/Portfolio.png)](https://codeclimate.com/github/nbarnes/Portfolio)[![endorse](https://api.coderwall.com/nbarnes/endorsecount.png)](https://coderwall.com/nbarnes)[![Security Status](http://rails-brakeman.com/nbarnes/Portfolio.png)](http://rails-brakeman.com/nbarnes/Portfolio)
+[![Build Status](https://travis-ci.org/nbarnes/Portfolio.png)](https://travis-ci.org/nbarnes/Portfolio) [![Code Climate](https://codeclimate.com/github/nbarnes/Portfolio.png)](https://codeclimate.com/github/nbarnes/Portfolio)[![endorse](https://api.coderwall.com/nbarnes/endorsecount.png)](https://coderwall.com/nbarnes)[![Security Status](http://rails-brakeman.com/nbarnes/Portfolio.png)](http://rails-brakeman.com/nbarnes/Portfolio)[![Coverage Status](https://coveralls.io/repos/nbarnes/Portfolio/badge.png)](https://coveralls.io/r/nbarnes/Portfolio)
 
 Overview
 ========
