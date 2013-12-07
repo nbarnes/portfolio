@@ -10,6 +10,7 @@ gem 'pundit'
 gem "redcarpet"
 gem "figaro"
 gem 'omniauth-twitter'
+gem 'coveralls', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
