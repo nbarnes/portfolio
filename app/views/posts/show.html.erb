@@ -14,8 +14,5 @@
     <br /><br />
   </div>
 <% end %>
-
-<%= link_to 'Submit new comment', new_post_comment_path(@post) %>
+<%= render 'shared/disqus_widget' %>
 <br />
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
