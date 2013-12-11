@@ -1,0 +1,32 @@
+
+.post_title_link {
+  color:#000000; /* unvisited link */
+}
+
+.post_title_link:visited {
+  color: #333333;
+}
+
+.post_title_link:hover {
+  color:#666666; /* mouse over link */
+}
+
+.post_title_link:active  {
+  color:#999999; /* mouse clicked link */
+}
+
+.post_comments_link {
+  color:#000000; /* unvisited link */
+}
+
+.post_comments_link:visited {
+  color: #333333;
+}
+
+.post_comments_link:hover  {
+  color:#666666; /* mouse over link */
+}
+
+.post_comments_link:active  {
+  color:#999999; /* mouse clicked link */
+}
