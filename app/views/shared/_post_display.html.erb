@@ -18,7 +18,7 @@
   <div id="<%= dom_id(post) %>-author" class="post_author">
     <b>Posted By:</b> <%= post.author.email %>
     <div class="post_timestamp">
-      on <%= post.created_at.strftime("%A, the #{post.created_at.day.ordinalize} of %B, %Y")  %>
+      <%= post.created_at.strftime("on %A, the #{post.created_at.day.ordinalize} of %B, %Y")  %>
     </div>
   </div>
 </div>
