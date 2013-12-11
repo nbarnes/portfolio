@@ -1,21 +1,21 @@
 
-.post_title_link {
+.post_title {
   color:#000000; /* unvisited link */
 }
 
-.post_title_link:visited {
+.post_title :visited {
   color: #333333;
 }
 
-.post_title_link:hover {
+.post_title:hover {
   color:#666666; /* mouse over link */
 }
 
-.post_title_link:active  {
+.post_title:active  {
   color:#999999; /* mouse clicked link */
 }
 
-.post_comments_link {
+/*.post_comments_link {
   color:#000000; /* unvisited link */
 }
 
@@ -29,4 +29,4 @@
 
 .post_comments_link:active  {
   color:#999999; /* mouse clicked link */
-}
+}*/
