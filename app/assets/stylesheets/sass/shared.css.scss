@@ -1,12 +1,16 @@
 
-  .blog_post {width:600px}
+.blog_post {width:500px}
 
-  .unpublished_label {
-    color: red;
-    font-weight:bold;
-  }
+.unpublished_label {
+  color: red;
+  font-weight:bold;
+}
 
-  .signed_in_label {
-    color: red;
-    font-weight: bold;
-  }
+.signed_in_label {
+  color: red;
+  font-weight: bold;
+}
+
+.post_author {
+  text-align: right;
+}

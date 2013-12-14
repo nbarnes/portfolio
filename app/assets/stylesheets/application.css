@@ -13,7 +13,3 @@
  *= require simple-sidebar
  *= require_tree .
  */
-
-.post_author {
-  text-align: right;
-}
