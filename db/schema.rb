@@ -11,12 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131216235310) do
-
-  create_table "battle_armors", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20131217200530) do
 
   create_table "comments", :force => true do |t|
     t.string   "author"
@@ -50,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20131216235310) do
     t.datetime "updated_at", :null => false
     t.string   "image"
     t.string   "title"
-    t.string   "link_to"
+    t.boolean  "published"
   end
 
   create_table "users", :force => true do |t|

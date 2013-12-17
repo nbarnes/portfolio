@@ -6,7 +6,7 @@ feature "Timestamps on posts" do
     visit posts_display_path
 
     page.all(".blog_post").each do |post|
-      post.must_have_css ".post_timestamp"
+      post.must_have_css ".entry_timestamp"
     end
   end
 

@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = policy_scope(Project)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def display
-    @projects = Project.all
+    @projects = policy_scope(Project)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -89,4 +89,14 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def toggle_published
+    @project = Project.find(params[:id])
+    authorize @project
+
+    @project.update_attributes(published: !@project.published)
+
+    redirect_to projects_path
+  end
+
 end

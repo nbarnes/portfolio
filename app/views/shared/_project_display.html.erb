@@ -8,13 +8,17 @@
   <%= link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link" %>
   </div>
 
+  <% if !project.published? %>
+    <span class="unpublished_label"> - Unpublished</span>
+  <% end %>
+
   <table class='project_display_table'>
     <tr>
       <td class='project_description'>
         <%= markdown project.content %>
       </td>
       <td>
-        <div class='project_image'>
+        <div>
           <%= image_tag project.image, size: '420x360', class: 'project_image' %>
         </div>
       </td>

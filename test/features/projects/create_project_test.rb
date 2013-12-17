@@ -10,15 +10,15 @@ feature "Creating a new project item" do
     click_on "Create New Project"
 
     # enter a new name for the project along with the technologies used
-    fill_in "Name", with: "Conquer the world!"
-    fill_in "Technologies used", with: "Ruby, Rails, Bootstrap, CC3, HTML5"
+    fill_in "Title", with: "Conquer the world!"
+    fill_in "Content", with: "Same thing we do every night!"
 
     click_on "Create Project"
 
     # have the changes echoed to the user with a confirmation request
     page.text.must_include "Project was successfully created"
     page.text.must_include "Conquer the world!"
-    page.text.must_include "Rails"
+    page.text.must_include "Same thing we do every night!"
 
   end
 end

@@ -1,6 +1,39 @@
+<h1>Listing projects</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
 <% @projects.each do |project| %>
-  <%= render 'shared/project_display', project: project %>
+  <tr id="<%= dom_id(project) %>">
+    <td><%= truncate(project.title, length: 20, separator: ' ') %></td>
+    <td><%= truncate(project.content, length: 40, separator: ' ') %></td>
+    <td><%= " - " %><%= link_to 'Show', project %></td>
+    <td><%= " - " %><%= link_to 'Edit', edit_project_path(project) %></td>
+
+    <td>
+      <%= " - " %>
+      <%= link_to 'Delete project', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+
+    <% if project.published? %>
+      <td>
+    <%= " - " %><%= link_to 'Unpublish', toggle_published_project_path(project), {method: :put} %></td>
+    <% else %>
+      <td>
+    <%= " - " %><%= link_to 'Publish', toggle_published_project_path(project), {method: :put} %></td>
+    <% end %>
+
+  </tr>
 <% end %>
 
+</table>
+
 <br />
-<%= link_to 'Create New Project', new_project_path %>
+
+<%= link_to 'New project', new_project_path %>

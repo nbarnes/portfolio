@@ -1,18 +1,7 @@
+
 <p id="notice"><%= notice %></p>
 
 <%= render partial: "shared/post_display", locals: {post: @post} %>
-
-<% @post.comments.each do |comment| %>
-  <div id="<%= dom_id(comment) %>">
-    <b>Comment:</b>
-    <%= comment.content %><br />&nbsp&nbsp&nbsp&nbsp
-    <%= " - #{ comment.author_email }" %>
-    <% if policy(comment).destroy? %>
-      <%= " - " %>
-      <%= link_to 'Delete Comment', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-    <br /><br />
-  </div>
-<% end %>
 <%= render 'shared/disqus_widget' %>
+
 <br />

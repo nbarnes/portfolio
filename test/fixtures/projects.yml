@@ -1,12 +1,18 @@
 
 portfolio:
-  name: Portfolio Platform
-  technologies_used: Ruby Rails CSS3 HTML5 Javascript jQuery
+  title: Portfolio Platform
+  content: This is my blogging platform. You're reading it!
+  image: portfolio_screenshot.png
+  published: true
 
 trakehner_db:
-  name: Unofficial Trakehner Database
-  technologies_used: Ruby Rails CSS3 HTML5 Javascript jQuery
+  title: Unofficial Trakehner Database
+  content: The Unofficial Trakehner Database! Searchable sortable Trakehner horses like never before.
+  image: UTDB_screenshot.png
+  published: true
 
 cpu_analyst:
-  name: Firefall CPU Analyst
-  technologies_used: Ruby
+  title: Firefall CPU Analyst
+  content: CPU placement analysis tool for Red5's Firefall
+  image: cpu_analyst_screenshot.png
+  published: false
