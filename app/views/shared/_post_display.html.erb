@@ -3,21 +3,25 @@
 <div id="<%= dom_id(post) %>" class="blog_post">
   <div id="<%= dom_id(post) %>-title">
 
-    <h4><%= link_to post.title, post, :class => "post_title" %></h4>
+    <h4><%= link_to post.title, post, :class => "entry_title" %></h4>
 
-    <div><%= link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link" %></div>
-      <% if !post.published? %>
-        <span class="unpublished_label"> - Unpublished</panel>
-      <% end %>
+    <div>
+      <%= link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link" %>
+    </div>
+
+    <% if !post.published? %>
+      <span class="unpublished_label"> - Unpublished</panel>
+    <% end %>
+
   </div>
 
-  <div id="<%= dom_id(post) %>-content" class="post_content">
+  <div id="<%= dom_id(post) %>-content" class="entry_content">
     <p><%= markdown post.content %>
   </div>
 
-  <div id="<%= dom_id(post) %>-author" class="post_author">
+  <div id="<%= dom_id(post) %>-author" class="entry_author">
     <b>Posted By:</b> <%= post.author.email %>
-    <div class="post_timestamp">
+    <div class="entry_timestamp">
       <%= post.created_at.strftime("on %A, the #{post.created_at.day.ordinalize} of %B, %Y")  %>
     </div>
   </div>

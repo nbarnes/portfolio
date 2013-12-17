@@ -1,16 +1,16 @@
 
-.post_title {
+.entry_title {
   color:#000000; /* unvisited link */
 }
 
-.post_title :visited {
+.entry_title :visited {
   color: #333333;
 }
 
-.post_title:hover {
+.entry_title:hover {
   color:#666666; /* mouse over link */
 }
 
-.post_title:active  {
+.entry_title:active  {
   color:#999999; /* mouse clicked link */
 }

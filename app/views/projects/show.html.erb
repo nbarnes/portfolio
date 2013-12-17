@@ -1,23 +1,5 @@
 
 <%= render 'shared/project_display', project: @project %>
-
-<% @project.comments.each do |comment| %>
-  <div id="<%= dom_id(comment) %>">
-    <b>Comment:</b>
-    <%= comment.content %><br />&nbsp&nbsp&nbsp&nbsp
-    <%= " - #{ comment.author_email }" %>
-    <% if policy(comment).destroy? %>
-      <%= " - " %>
-      <%= link_to 'Delete Comment', project_comment_path(@project, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-    <br /><br />
-  </div>
-<% end %>
-
 <br />
 <br />
-
-<%= link_to 'Submit new comment', new_project_comment_path(@project) %>
-<br />
-<br />
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Back', projects_display_path %>

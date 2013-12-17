@@ -1,12 +1,23 @@
 
 
-<% @commentable ? project = @commentable : nil %>
 <div class="project" id="<%= dom_id(project) %>">
-  <h3><%= project.name %></h3>
-  <p><%= project.technologies_used %></p>
-  <div class="nav">
-    <%= link_to 'Show', project %> |
-    <%= link_to 'Edit', edit_project_path(project) %> |
-    <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <h4><%= link_to project.title, project, :class => "entry_title" %></h4>
+
+  <div>
+  <%= link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link" %>
   </div>
+
+  <table class='project_display_table'>
+    <tr>
+      <td class='project_description'>
+        <%= markdown project.content %>
+      </td>
+      <td>
+        <div class='project_image'>
+          <%= image_tag project.image, size: '420x360', class: 'project_image' %>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
