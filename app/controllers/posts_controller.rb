@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  # restricts create, update, edit, and destroy to signed in users
+  # restricts index, create, update, edit, and destroy to signed in users
   before_filter :authenticate_user!, except: [:show, :display]
 
   # GET /posts

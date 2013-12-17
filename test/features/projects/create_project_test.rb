@@ -1,13 +1,14 @@
 require "test_helper"
 
 feature "Creating a new project item" do
-  scenario "User visits new project page, creates project, and gets success message" do
+  scenario "Admin visits new project page, creates project, and gets success message" do
 
+    sign_in_fox
     # Visit the projects index
     visit projects_path
 
     # Click the Create Project button to start making a new project
-    click_on "Create New Project"
+    click_on "New project"
 
     # enter a new name for the project along with the technologies used
     fill_in "Title", with: "Conquer the world!"

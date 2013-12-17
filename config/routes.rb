@@ -10,14 +10,12 @@ Portfolio::Application.routes.draw do
   get 'projects/display'
 
   resources :posts do
-    resources :comments, except: :index
     member do
       put 'toggle_published'
     end
   end
 
   resources :projects do
-    resources :comments, except: :index
     member do
       put 'toggle_published'
     end

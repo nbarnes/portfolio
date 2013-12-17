@@ -74,6 +74,7 @@ module Portfolio
 
     config.autoload_paths += %W(#{config.root}/lib)
 
+    I18n.enforce_available_locales = true
 
   end
 end

@@ -4,6 +4,7 @@ feature "Stopping a project creation with blank fields" do
 
   scenario "User attemps to create a project with a blank title and fails" do
 
+    sign_in_fox
     # Visit the projects index
     visit new_project_path
 

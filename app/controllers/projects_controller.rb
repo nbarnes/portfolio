@@ -1,4 +1,8 @@
 class ProjectsController < ApplicationController
+
+  # restricts index, create, update, edit, and destroy to signed in users
+  before_filter :authenticate_user!, except: [:show, :display]
+
   # GET /projects
   # GET /projects.json
   def index

@@ -1,7 +1,12 @@
+
+# ruby -Itest test/features/projects/edit_project_test.rb
+
 require "test_helper"
 
 feature "Editing a Project" do
   scenario "Editing the title and body of an existing Project" do
+
+    sign_in_fox
 
     visit edit_project_path(projects(:portfolio))
 

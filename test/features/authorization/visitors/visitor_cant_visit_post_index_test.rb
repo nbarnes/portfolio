@@ -6,7 +6,7 @@ feature "Visitors can't visit the posts index" do
     visit posts_path
 
     # Visitor attempts to visit the posts index, but gets redirected to
-    # the posts display page (which happens to be set to root)
+    # root (which happens to be the posts display page)
     current_path.must_equal "/"
 
   end
