@@ -19,7 +19,9 @@
       </td>
       <td>
         <div>
-          <%= image_tag project.image, size: '420x360', class: 'project_image' %>
+          <% if project.image != "" %>
+            <%= image_tag project.image, size: '420x360', class: 'project_image' %>
+          <% end %>
         </div>
       </td>
     </tr>
