@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
-  revision: 2d18c2ad0eeafe5b4909fe68637ff5be3fe3bace
-  specs:
-    bootstrap-sass (3.0.3.0)
-      sass (~> 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,6 +209,7 @@ GEM
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
+    skeleton-rails (0.1.0)
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -252,13 +246,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass!
   brakeman
   coffee-rails (~> 3.2.1)
   coveralls
   devise
   figaro
   font-awesome-rails
+  haml
   jquery-rails
   minitest-rails
   minitest-rails-capybara
@@ -273,5 +267,6 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 3.2.3)
   simplecov
+  skeleton-rails
   turn
   uglifier (>= 1.0.3)

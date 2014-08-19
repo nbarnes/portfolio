@@ -5,19 +5,20 @@ gem 'rails', '3.2.15'
 gem 'pg'
 gem 'font-awesome-rails'
 gem 'devise'
-gem "minitest-rails"
+gem 'minitest-rails'
+gem 'haml'
 gem 'pundit'
-gem "redcarpet"
-gem "figaro"
+gem 'redcarpet'
+gem 'figaro'
 gem 'omniauth-twitter'
 gem 'coveralls', require: false
+gem 'skeleton-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -28,7 +29,7 @@ end
 
 group :development do
   gem 'brakeman', :require => false
-  gem "rails_best_practices"
+  gem 'rails_best_practices'
 end
 
 group :development, :test do
@@ -37,9 +38,9 @@ group :development, :test do
 end
 
 group :test do
-  gem "minitest-rails-capybara"
-  gem "turn"
-  gem "simplecov"
+  gem 'minitest-rails-capybara'
+  gem 'turn'
+  gem 'simplecov'
 end
 
 gem 'jquery-rails'
