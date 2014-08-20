@@ -1,3 +1,9 @@
+// f1d592 darker cfaa51
+
+#tabbed_content
+  width: 70%
+  margin: 0 auto
+
 .tab_row
   position: relative
   text-align: center
@@ -6,19 +12,61 @@
   padding: 0
   line-height: 24px
 
+.tab_row:before
+  z-index: 1
+
+.tab_row:after
+  position: absolute
+  content: ""
+  width: 100%
+  bottom: 0
+  left: 0
+  border-bottom: 1px solid #000
+  z-index: 1
+
 .tab_row li
+  position: relative
+  z-index: 0
   margin: 0 10px
   padding: 0 10px
-  border: 1px solid #AAA
-  background: #ECECEC
+  line-height: inherit
+  border: 1px solid #000
+  background: #e5b33c
   display: inline-block
+  border-top-left-radius: 6px
+  border-top-right-radius: 6px
+
+.tab_row li
+  background: #cfaa51
+  margin: 0 -5px
+  padding: 0 20px
+  background:      -o-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+  background:     -ms-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+  background:    -moz-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+  background: -webkit-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+  background:         linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
 
 .tab_row li.selected
-  background: #FFF
+  background: #F6F2D0
+  border-bottom-color: #F6F2D0
   color: #000
+  z-index: 2
+
+#content_pane
+  background-image: image-url('manila_folder_background.jpg')
+  background-repeat: no-repeat
+  background-size: 100% 100%
+
+  width: 100%
+  height: 800px
+  border-right: 1px solid #000
+  border-left: 1px solid #000
+  border-bottom: 1px solid #000
 
 .content
+  padding: 10px
+
+.content:not(.selected)
   display: none
 
 .content.selected
-  display: block

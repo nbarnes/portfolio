@@ -11,6 +11,6 @@
  *= require_self
  *= require base
  *= require layout
- *= require simple-sidebar
+ *= require skeleton
  *= require_tree .
  */
