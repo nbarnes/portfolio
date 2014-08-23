@@ -1,0 +1,58 @@
+
+@font-face {
+    font-family: 'distant_galaxy';
+    src: url('distgrg_-webfont.eot');
+    src: url('distgrg_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('distgrg_-webfont.woff') format('woff'),
+         url('distgrg_-webfont.ttf') format('truetype'),
+         url('distgrg_-webfont.svg#distant_galaxyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dirty_harry';
+    src: url('dirty_harry-webfont.eot');
+    src: url('dirty_harry-webfont.eot?#iefix') format('embedded-opentype'),
+         url('dirty_harry-webfont.woff') format('woff'),
+         url('dirty_harry-webfont.ttf') format('truetype'),
+         url('dirty_harry-webfont.svg#dirty_harryregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'old_republic_bold';
+    src: url('old_r-webfont.eot');
+    src: url('old_r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('old_r-webfont.woff') format('woff'),
+         url('old_r-webfont.ttf') format('truetype'),
+         url('old_r-webfont.svg#old_republic_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'impact_label';
+    src: url('impact_label-webfont.eot');
+    src: url('impact_label-webfont.eot?#iefix') format('embedded-opentype'),
+         url('impact_label-webfont.woff') format('woff'),
+         url('impact_label-webfont.ttf') format('truetype'),
+         url('impact_label-webfont.svg#impact_label') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'impact_label_reversed';
+    src: url('impact_label_reversed-webfont.eot');
+    src: url('impact_label_reversed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('impact_label_reversed-webfont.woff') format('woff'),
+         url('impact_label_reversed-webfont.ttf') format('truetype'),
+         url('impact_label_reversed-webfont.svg#impact_label_reversed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -4,6 +4,8 @@ class StaticController < ApplicationController
   end
 
   def tabs
+    @projects = policy_scope(Project)
+    @posts = policy_scope(Post)
   end
 
 end

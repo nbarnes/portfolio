@@ -1,0 +1,28 @@
+
+#tabbed_content
+  #tab_pane
+    %ul.tab_row
+      %li#projects_tab.tab.selected
+        Projects
+      %li#blog_tab.tab
+        Blog
+
+  #content_pane
+
+    #projects_content.content.selected
+      - @projects.each do |project|
+        = project.title
+        %br
+        = project.content
+        %br
+        %br
+
+    #blog_content.content
+      - @posts.each do |post|
+        = post.title
+        %br
+        = post.content
+        %br
+        = post.author.email
+        %br
+        %br

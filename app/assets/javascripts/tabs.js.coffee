@@ -1,16 +1,10 @@
 $ ->
 
-  $('#tab1').click ->
-    display_tabbed_content($('#tab1'), $('#content1'))
+  $('#projects_tab').click ->
+    display_tabbed_content($('#projects_tab'), $('#projects_content'))
 
-  $('#tab2').click ->
-    display_tabbed_content($('#tab2'), $('#content2'))
-
-  $('#tab3').click ->
-    display_tabbed_content($('#tab3'), $('#content3'))
-
-  $('#tab4').click ->
-    display_tabbed_content($('#tab4'), $('#content4'))
+  $('#blog_tab').click ->
+    display_tabbed_content($('#blog_tab'), $('#blog_content'))
 
   display_tabbed_content = (new_content_tab, new_content) ->
     $('#tab_pane .selected').toggleClass('selected')

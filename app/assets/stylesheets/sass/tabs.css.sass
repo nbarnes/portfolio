@@ -1,15 +1,15 @@
-// f1d592 darker cfaa51
+// manila - f1d592, manila unselected - cfaa51
 
 #tabbed_content
-  width: 70%
-  margin: 0 auto
+  width: 60%
 
 .tab_row
   position: relative
-  text-align: center
+  text-align: left
   list-style: none
-  margin: 0
-  padding: 0
+  margin: 0px
+  margin-left: 5px
+  padding: 0px
   line-height: 24px
 
 .tab_row:before
@@ -26,25 +26,29 @@
 
 .tab_row li
   position: relative
+  margin: 0 -5px
+  padding: 20px
+  width: 35%
   z-index: 0
-  margin: 0 10px
-  padding: 0 10px
-  line-height: inherit
+  line-height: 18px
   border: 1px solid #000
-  background: #e5b33c
   display: inline-block
   border-top-left-radius: 6px
   border-top-right-radius: 6px
-
-.tab_row li
-  background: #cfaa51
-  margin: 0 -5px
-  padding: 0 20px
   background:      -o-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
   background:     -ms-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
   background:    -moz-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
   background: -webkit-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
   background:         linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+
+#projects_tab
+  font-family: distant_galaxy
+  font-size: 200%
+  height: 15px
+#blog_tab
+  font-family: impact_label
+  font-size: 200%
+  height: 15px
 
 .tab_row li.selected
   background: #F6F2D0
