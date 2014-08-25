@@ -2,8 +2,6 @@
 // manila #f1d592
 // desaturated #cfaa51
 
-#tabbed_content
-
 .tab_row
   position: relative
   text-align: left
@@ -52,7 +50,7 @@
   color: #000
   z-index: 2
 
-#content_pane
+#tabbed_content_pane
   background-image: image-url('manila_folder_background.jpg')
   background-repeat: no-repeat
   background-size: 100% 100%
@@ -67,14 +65,11 @@
   border-bottom-left-radius: 6px
   border-bottom-right-radius: 6px
 
-#content_pane.upper_right_rounded_corner
+#tabbed_content_pane.upper_right_rounded_corner
   border-top-left-radius: 6px
 
-.content
+.tabbed_content
   padding: 10px
-  font-family: libre_baskerville
 
-.content:not(.selected)
+.tabbed_content:not(.selected)
   display: none
-
-.content.selected

@@ -15,14 +15,19 @@ Portfolio::Application.routes.draw do
     end
   end
 
+  get 'welcome', to: 'static#welcome'
+  get 'projects', to: 'static#projects'
+  get 'blog', to: 'static#blog'
+  get 'about_me', to: 'static#about_me'
+
   resources :projects do
     member do
       put 'toggle_published'
     end
   end
 
-  root :to => 'posts#display'
+  get '/*foo', to: redirect('/welcome')
 
-  get ':action' => 'static#:action'
+  root :to => 'posts#display'
 
 end

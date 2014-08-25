@@ -1,6 +1,6 @@
 
-#tabbed_content
-  #tab_pane
+#tab_pane
+  #tabs
     %ul.tab_row
       %li#welcome_tab.tab.selected
         Welcome
@@ -8,23 +8,28 @@
         Projects
       %li#blog_tab.tab
         Blog
-      %li#about_tab.tab
+      %li#about_me_tab.tab
         About
 
-  #content_pane
+  #tabbed_content_pane
 
-    #welcome_content.content.selected
+
+    = controller_name
+    %br
+    = action_name
+
+    #welcome_content.tabbed_content
       = render "static/welcome_content"
 
-    #projects_content.content
+    #projects_content.tabbed_content
       - @projects.each do |project|
         = render "shared/project_display", project: project
         %br
 
-    #blog_content.content
+    #blog_content.tabbed_content
       - @posts.each do |post|
         = render "shared/post_display", post: post
         %br
 
-    #about_content.content
+    #about_me_content.tabbed_content
       = render "static/about_me"

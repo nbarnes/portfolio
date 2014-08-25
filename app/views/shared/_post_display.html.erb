@@ -3,7 +3,7 @@
 <div id="<%= dom_id(post) %>" class="blog_post">
   <div id="<%= dom_id(post) %>-title">
 
-    <h4><%= link_to post.title, post, :class => "entry_title title" %></h4>
+    <%= link_to post.title, post, :class => "entry_title title" %>
 
     <div>
       <%= link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link" %>

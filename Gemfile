@@ -11,7 +11,6 @@ gem 'redcarpet'
 gem 'figaro'
 gem 'omniauth-twitter'
 gem 'coveralls', require: false
-gem 'skeleton-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
