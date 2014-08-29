@@ -5,6 +5,7 @@ gem 'rails', '3.2.19'
 gem 'pg'
 gem 'devise'
 gem 'minitest-rails'
+gem 'minitest-rails-capybara'
 gem 'haml'
 gem 'pundit'
 gem 'redcarpet'
@@ -15,9 +16,9 @@ gem 'coveralls', require: false
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :production do
@@ -28,15 +29,17 @@ end
 group :development do
   gem 'brakeman', :require => false
   gem 'rails_best_practices'
+  gem 'spring'
+  gem 'launchy'
 end
 
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'capybara-webkit'
 end
 
 group :test do
-  gem 'minitest-rails-capybara'
   gem 'turn'
   gem 'simplecov'
 end

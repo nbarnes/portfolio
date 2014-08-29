@@ -26,12 +26,3 @@ class ActionDispatch::IntegrationTest
   include Capybara::DSL
 end
 
-def sign_in_fox
-  visit new_user_session_path
-  fill_in "Email", with: users(:fox).email
-  fill_in "Password", with: "foxbarnes"
-  click_button "Sign in"
-  page.wont_have_content "Invalid email or password"
-  page.must_have_content "Signed in successfully."
-end
-

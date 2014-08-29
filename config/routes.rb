@@ -16,7 +16,9 @@ Portfolio::Application.routes.draw do
   end
 
   get 'welcome', to: 'static#welcome'
+  get 'portfolio', to: 'static#welcome'
   get 'projects', to: 'static#projects'
+  get 'posts', to: 'static#blog'
   get 'blog', to: 'static#blog'
   get 'about_me', to: 'static#about_me'
 

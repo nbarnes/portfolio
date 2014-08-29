@@ -1,4 +1,4 @@
-# ruby -Itest test/features/projects/visitor_cant_see_unpublished_projects_test.rb
+# ruby -Itest test/features/projects/view_projects_in_tab.rb
 
 require 'test_helper'
 
@@ -14,16 +14,13 @@ feature 'Visit and view the projects list in the tab' do
   end
 
   scenario "Doesn't show unpublished projects" do
-
     visit projects_path
     page.wont_have_content 'analyst'
-
   end
 
   scenario "Doesn't show blog content when viewing project content" do
-
-      # page.find('.blog_content').must_have_css ''
-
+    visit projects_path
+    page.wont_have_content 'post1_title'
   end
 
 end
