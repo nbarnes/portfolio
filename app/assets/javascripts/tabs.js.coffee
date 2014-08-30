@@ -1,11 +1,5 @@
 $ ->
 
-  window['tabs#projects'] = (data) ->
-    alert('start of projects')
-
-  window['tabs#blog'] = (data) ->
-    alert('start of blog')
-
   $('#welcome_tab').click ->
     select_tab('welcome')
 
@@ -18,7 +12,7 @@ $ ->
   $('#about_me_tab').click ->
     select_tab('about_me')
 
-  select_tab = (tab_name) ->
+  window.select_tab = (tab_name) ->
     display_tabbed_content($('#' + tab_name + '_tab'), $('#' + tab_name + '_content'))
     window.history.pushState(tab_name + '_tab', '', '/' + tab_name);
 
@@ -33,5 +27,3 @@ $ ->
 
     $('#content_pane .selected').toggleClass('selected')
     new_content.toggleClass('selected')
-
-  select_tab( $('body').attr('data-action') )

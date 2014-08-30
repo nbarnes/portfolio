@@ -4,7 +4,7 @@
     = link_to project.title, project, :class => "entry_title title"
   = link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link"
   - if !project.published?
-    .unplublished_label
+    .unpublished_label
       :preserve
         - Unpublished
   .project_description

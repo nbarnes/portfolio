@@ -1,8 +1,12 @@
 
-#site_header
-  #site_owner_name
-    Nathaniel Barnes
-  #tagline
-    Elegant software design for a more civilized age
+#admin_nav
+  - if user_signed_in?
+    %span.signed_in_label
+      Signed in
+    %br
+    = link_to "Sign out", destroy_user_session_path, method: :delete
 
-
+#site_owner_name
+  Nathaniel Barnes
+#tagline
+  Elegant software design for a more civilized age
