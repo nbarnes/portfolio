@@ -1,23 +1,23 @@
-class StaticController < ApplicationController
+class FrontPageController < ApplicationController
   before_filter :projects_and_posts
 
   def tabs
   end
 
   def welcome
-    render "tabs"
+    render "tabbed_view"
   end
 
   def projects
-    render "tabs"
+    render "tabbed_view"
   end
 
   def blog
-    render "tabs"
+    render "tabbed_view"
   end
 
   def about_me
-    render "tabs"
+    render "tabbed_view"
   end
 
   def projects_and_posts

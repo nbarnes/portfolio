@@ -6,6 +6,15 @@ Portfolio::Application.routes.draw do
     get "login", :to => "devise/sessions#new"
   end
 
+  root :to => 'front_page#welcome'
+
+  get 'welcome', to: 'front_page#welcome'
+  get 'portfolio', to: 'front_page#welcome'
+  get 'projects', to: 'front_page#projects'
+  get 'posts', to: 'front_page#blog'
+  get 'blog', to: 'front_page#blog'
+  get 'about_me', to: 'front_page#about_me'
+
   get 'posts/display'
   get 'projects/display'
 
@@ -15,13 +24,6 @@ Portfolio::Application.routes.draw do
     end
   end
 
-  get 'welcome', to: 'static#welcome'
-  get 'portfolio', to: 'static#welcome'
-  get 'projects', to: 'static#projects'
-  get 'posts', to: 'static#blog'
-  get 'blog', to: 'static#blog'
-  get 'about_me', to: 'static#about_me'
-
   resources :projects do
     member do
       put 'toggle_published'
@@ -29,7 +31,5 @@ Portfolio::Application.routes.draw do
   end
 
   get '/*foo', to: redirect('/welcome')
-
-  root :to => 'posts#display'
 
 end

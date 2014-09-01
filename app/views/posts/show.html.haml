@@ -1,0 +1,26 @@
+= extends :tab_layout do
+  = replace :tabs do
+    %li#welcome_tab.tab
+      Welcome
+    %li#projects_tab.tab
+      Projects
+    %li#blog_tab.tab
+      Blog
+    %li#about_me_tab.tab
+      About
+
+  = replace :content do
+
+    #welcome_content.tabbed_content
+      = render "front_page/welcome_content"
+
+    #projects_content.tabbed_content
+      - @projects.each do |project|
+        = render "projects/project_display", project: project
+        %br
+
+    #blog_content.tabbed_content
+      = render "posts/post_display", post: @post
+
+    #about_me_content.tabbed_content
+      = render "front_page/about_me"

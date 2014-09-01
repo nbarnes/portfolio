@@ -16,12 +16,6 @@
 
   <body class="<%= controller_name %> <%= action_name %>" %>
 
-    <% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>">
-        <%= value %>
-      </div>
-    <% end %>
-
     <%= render 'shared/header' %>
 
     <%= yield %>

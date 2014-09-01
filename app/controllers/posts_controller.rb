@@ -26,7 +26,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
+    @projects = policy_scope(Project)
+    begin
+      @post = Post.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      @post = nil
+    end
+
 
     respond_to do |format|
       format.html # show.html.erb

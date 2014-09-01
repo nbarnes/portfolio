@@ -129,6 +129,8 @@ GEM
     minitest-test (1.1.0)
       minitest (~> 4.0)
     multi_json (1.10.1)
+    nestive (0.5.0)
+      rails (>= 3.0.0)
     netrc (0.7.7)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
@@ -266,6 +268,7 @@ DEPENDENCIES
   launchy
   minitest-rails
   minitest-rails-capybara
+  nestive
   omniauth-twitter
   pg
   pry-debugger
