@@ -6,7 +6,7 @@
     = link_to post.title, post, :class => "entry_title title"
     - if !post.published?
       %span.unpublished_label
-        \- Unpublished
+        \ - Unpublished
     %br
     = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
     %br

@@ -2,14 +2,14 @@
 #tab_pane
   #tabs
     %ul.tab_row
-      %li#login_tab.tab.selected
+      %li#login_tab.tab
         Log In
 
   #tabbed_content_pane
 
-    #login_content.tabbed_content.selected
-      #log_in_label.title
-        Sign in
+    #login_content.tabbed_content
+      #login_label.title
+        Log in
 
       = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
 
@@ -34,7 +34,7 @@
           = f.label :remember_me
         %br
 
-        = f.submit "Sign in", :class => 'sign_in_button'
+        = f.submit "Log in", :class => 'log_in_button'
 
       %input{:type => 'button', :value => 'trigger_br_bug_button', :id => 'trigger_br_bug_button'}
 

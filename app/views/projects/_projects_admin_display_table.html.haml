@@ -1,0 +1,35 @@
+%table.projects_display_table
+  %tr#project_table_header_row.title
+    %th
+      Created At
+    %th
+      Title
+    %th
+      Content
+    %th
+      Open
+    %th
+      Delete
+    %th
+      Published
+
+  - @projects.each do |project|
+    %tr{:id => ['project' + project.id.to_s], :class => 'project_row'}
+      %td
+        = project.created_at
+      %td
+        = truncate(project.title, length: 20, separator: ' ')
+      %td
+        = truncate(project.content, length: 40, separator: ' ')
+
+      %td
+        = link_to 'Show', project
+      %td
+        = link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
+
+      - if project.published?
+        %td
+          = link_to 'Unpublish', toggle_published_project_path(project), {method: :put}
+      - else
+        %td
+          = link_to 'Publish', toggle_published_project_path(project), {method: :put}

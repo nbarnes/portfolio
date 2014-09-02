@@ -1,0 +1,11 @@
+= extends :tab_layout do
+  = replace :tabs do
+    %li#projects_admin_tab.tab
+      Projects Admin
+
+  = replace :content do
+
+    #projects_admin_content.tabbed_content
+
+      = render 'projects/projects_admin_display_table', projects: @projects
+      %br

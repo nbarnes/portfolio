@@ -11,3 +11,12 @@ $ ->
 
   $('.posts.show').ready ->
     select_tab( 'blog' )
+
+  $('.projects.show').ready ->
+    select_tab( 'projects' )
+
+  $('.projects.admin').ready ->
+    select_tab( 'projects_admin' )
+
+  $('.sessions.new').ready ->
+    select_tab( 'login' )

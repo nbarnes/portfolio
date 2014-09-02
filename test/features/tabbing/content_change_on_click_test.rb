@@ -35,9 +35,9 @@ feature 'Content in the view area changes based on tab clicks' do
   scenario "Upper right content display rounds / unrounds based on welcome selection" do
 
     visit blog_path
-    assert page.has_css?('div.upper_right_rounded_corner')
+    assert page.has_css?('div.upper_right_rounded_corner'), "Assertion has_rounded_corner failed, does not have class"
     page.find('#welcome_tab').click
-    refute page.has_css?('div.upper_right_rounded_corner')
+    refute page.has_css?('div.upper_right_rounded_corner'), "Refutation has_rounded_corner failed, does have class"
 
   end
 

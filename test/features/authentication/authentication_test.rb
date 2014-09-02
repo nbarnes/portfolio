@@ -13,11 +13,11 @@ feature "Authentication" do
     fill_in "Email", with: users(:fox).email
     fill_in "Password", with: "foxbarnes"
 
-    click_button "Sign in"
+    click_button "Log in"
 
     page.must_have_content "Signed in successfully."
 
-    click_on "Sign out"
+    click_on "Log out"
 
     page.must_have_content "Signed out successfully."
   end

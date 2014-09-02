@@ -18,6 +18,20 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def login_fox
+    visit new_user_session_path
+
+    page.must_have_content "Email"
+    page.must_have_content "Password"
+    page.must_have_content "Remember me"
+
+    fill_in "Email", with: users(:fox).email
+    fill_in "Password", with: "foxbarnes"
+
+    click_button "Log in"
+  end
+
 end
 
 class ActionDispatch::IntegrationTest

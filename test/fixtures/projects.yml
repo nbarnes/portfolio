@@ -16,3 +16,9 @@ cpu_analyst:
   content: CPU placement analysis tool for Red5's Firefall
   image: cpu_analyst_screenshot.png
   published: false
+
+pixel_paisan:
+  title: Pixel Paisan
+  content: Pixel art creation and sharing website
+  image: piq_vi_large.png
+  published: true

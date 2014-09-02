@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def display
+  def admin
     @projects = policy_scope(Project)
 
     respond_to do |format|
@@ -26,8 +26,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-  def show
-    @posts = policy_scope(Project)
+    @posts = policy_scope(Post)
     begin
       @project = Project.find(params[:id])
     rescue ActiveRecord::RecordNotFound => e
@@ -106,7 +105,7 @@ class ProjectsController < ApplicationController
 
     @project.update_attributes(published: !@project.published)
 
-    redirect_to projects_path
+    redirect_to projects_admin_path
   end
 
 end

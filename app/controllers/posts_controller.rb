@@ -112,7 +112,7 @@ class PostsController < ApplicationController
 
     @post.update_attributes(published: !@post.published)
 
-    redirect_to posts_path
+    redirect_to posts_admin_path
   end
 
 end
