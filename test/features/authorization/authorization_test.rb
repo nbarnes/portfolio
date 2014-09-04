@@ -9,8 +9,8 @@ feature "Authorization" do
     page.wont_have_content "Projects Admin"
   end
 
-  scenario "Unauthorized visitor cannot visit projects admin management page" do
-    visit projects_admin_path
+  scenario "Unauthorized visitor cannot visit posts admin management page" do
+    visit posts_admin_path
     page.wont_have_content "Posts Admin"
   end
 

@@ -16,3 +16,15 @@ post3:
   content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.
   author: fox
   published: true
+
+post4:
+  title: post4_title
+  content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.
+  author: fox
+  published: true
+
+post5:
+  title: post5_title
+  content: This is the content of fixture post5.
+  author: fox
+  published: false

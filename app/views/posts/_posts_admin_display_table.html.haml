@@ -1,0 +1,35 @@
+%table.posts_display_table
+  %tr#post_table_header_row.title
+    %th
+      Created At
+    %th
+      Title
+    %th
+      Content
+    %th
+      Open
+    %th
+      Delete
+    %th
+      Published
+
+  - @posts.each do |post|
+    %tr{:id => ['post' + post.id.to_s], :class => 'post_row'}
+      %td
+        = post.created_at
+      %td
+        = truncate(post.title, length: 20, separator: ' ')
+      %td
+        = truncate(post.content, length: 40, separator: ' ')
+
+      %td
+        = link_to 'Show', post
+      %td
+        = link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }
+
+      - if post.published?
+        %td
+          = link_to 'Unpublish', toggle_published_post_path(post), {method: :put}
+      - else
+        %td
+          = link_to 'Publish', toggle_published_post_path(post), {method: :put}

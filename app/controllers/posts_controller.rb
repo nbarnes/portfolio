@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def admin
+    @posts = policy_scope(Post)
+  end
+
   def display
     @posts = policy_scope(Post)
 

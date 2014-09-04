@@ -1,3 +1,5 @@
+# rake test TEST=test/features/admin/project_admin_test.rb
+
 require "test_helper"
 
 feature "Admin functionality for projects" do
@@ -22,12 +24,11 @@ feature "Admin functionality for projects" do
   end
 
   scenario "Admin can view single projects" do
-    # login_fox
-    # visit projects_admin_path
-    # page.must_have_content 'Projects Admin'
-    # page.find_by_id('project' + projects(:cpu_analyst).id.to_s).click_on 'Show'
-    # page.url.must_equal('http://')
-    # page.must_have_content 'CPU placement analysis'
+    login_fox
+    visit projects_admin_path
+    page.must_have_content 'Projects Admin'
+    page.find_by_id('project' + projects(:cpu_analyst).id.to_s).click_on 'Show'
+    page.must_have_content 'CPU placement analysis'
   end
 
 end

@@ -11,10 +11,11 @@ $ ->
 
   $('.posts.show').ready ->
     select_tab( 'blog' )
+  $('.posts.admin').ready ->
+    select_tab( 'posts_admin' )
 
   $('.projects.show').ready ->
     select_tab( 'projects' )
-
   $('.projects.admin').ready ->
     select_tab( 'projects_admin' )
 

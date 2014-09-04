@@ -2,7 +2,7 @@
   = replace :tabs do
     %li#welcome_tab.tab
       Welcome
-    %li#projects_tab.tab
+    %li#projects_tab.tab{:data => {:url => "#{request.env['ORIGINAL_FULLPATH']}"}}
       Projects
     %li#blog_tab.tab
       Blog

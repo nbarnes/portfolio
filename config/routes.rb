@@ -16,7 +16,9 @@ Portfolio::Application.routes.draw do
   get 'about_me', to: 'front_page#about_me'
 
   get 'posts/display'
+
   get 'projects/admin'
+  get 'posts/admin'
 
   resources :posts do
     member do

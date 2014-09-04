@@ -16,6 +16,7 @@ require "minitest/rails/capybara"
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
+  self.use_transactional_fixtures = true
 
   # Add more helper methods to be used by all tests here...
 
@@ -30,6 +31,11 @@ class ActiveSupport::TestCase
     fill_in "Password", with: "foxbarnes"
 
     click_button "Log in"
+  end
+
+  def logout
+    visit welcome_path
+    click_link 'Log out'
   end
 
 end

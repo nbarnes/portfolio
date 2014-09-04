@@ -1,0 +1,11 @@
+= extends :tab_layout do
+  = replace :tabs do
+    %li#posts_admin_tab.tab
+      Posts Admin
+
+  = replace :content do
+
+    #posts_admin_content.tabbed_content
+
+      = render 'posts/posts_admin_display_table', posts: @posts
+      %br

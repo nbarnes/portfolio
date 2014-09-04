@@ -8,7 +8,7 @@ feature 'Visit and view the projects list in the tab' do
     visit projects_path
     page.must_have_content 'Nathaniel Barnes'
     page.must_have_content 'Portfolio Platform'
-    page.must_have_content 'Unofficial Trakehner Database'
+    page.must_have_content 'Searchable sortable Trakehner horses'
   end
 
   scenario "Doesn't show unpublished projects" do

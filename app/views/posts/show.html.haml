@@ -4,7 +4,7 @@
       Welcome
     %li#projects_tab.tab
       Projects
-    %li#blog_tab.tab
+    %li#blog_tab.tab{:data => {:url => "#{request.env['ORIGINAL_FULLPATH']}"}}
       Blog
     %li#about_me_tab.tab
       About

@@ -15,7 +15,7 @@ feature 'Visit and view the blog posts in the tab' do
 
   scenario "Doesn't show unpublished posts" do
     visit blog_path
-    page.wont_have_content 'Ut wisi enim ad minim veniam quis nostrud'
+    page.wont_have_content 'post5_title'
   end
 
   scenario "Doesn't show projects content when viewing blog content" do
