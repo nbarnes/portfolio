@@ -1,54 +1,66 @@
 
-// manila #f1d592
-// desaturated #cfaa51
+
+@media (min-width: 40em)
+  .tab_row li
+    font-size: 100%
+    width: 18%
+
+@media (max-width: 40em)
+  .tab_row li
+    font-size: 90%
+    width: 13%
+
+$manila: #F6F2D0
+$desaturated: #e3d770
+$rounding_raidus: 0.4em
+
+#tab_pane
+  position: relative
+  top: -0.7em
 
 .tab_row
   position: relative
   text-align: left
   list-style: none
-  margin: 0px
-  margin-left: 5px
-  padding: 0px
-  line-height: 24px
+  margin: 0em
+  margin-left: 0.3em
+  padding: 0em
 
-.tab_row:before
-  z-index: 1
+  :before
+    z-index: 1
 
-.tab_row:after
-  position: absolute
-  content: ""
-  width: 100%
-  bottom: 0
-  left: 0
-  border-bottom: 1px solid #000
-  z-index: 1
+  :after
+    position: absolute
+    content: ""
+    width: 100%
+    bottom: 0
+    left: 0
+    border-bottom: 1px solid #000
+    z-index: 1
 
-.tab_row li
-  font-size: 100%
-  position: relative
-  margin: 0 -5px
-  padding: 20px
-  width: 18%
-  z-index: 0
-  line-height: 0px
-  border: 1px solid #000
-  display: inline-block
-  border-top-left-radius: 6px
-  border-top-right-radius: 6px
-  background:      -o-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
-  background:     -ms-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
-  background:    -moz-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
-  background: -webkit-linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
-  background:         linear-gradient(top, #e3d770 15%, #F6F2D0 100%)
+  li
+    font-family: franklin_gothic_condensed
+    position: relative
+    top: 1px
+    margin: 0 -0.3em
+    padding: 1.3em
+    z-index: 0
+    line-height: 0em
+    border: 1px solid #000
+    display: inline-block
+    border-top-left-radius: $rounding_raidus
+    border-top-right-radius: $rounding_raidus
+    background:      -o-linear-gradient(top, $desaturated 15%, $manila 100%)
+    background:     -ms-linear-gradient(top, $desaturated 15%, $manila 100%)
+    background:    -moz-linear-gradient(top, $desaturated 15%, $manila 100%)
+    background: -webkit-linear-gradient(top, $desaturated 15%, $manila 100%)
+    background:         linear-gradient(top, $desaturated 15%, $manila 100%)
 
-.tab
-  font-family: franklin_gothic_condensed
-
-.tab_row li.selected
-  background: #F6F2D0
-  border-bottom-color: #F6F2D0
-  color: #000
-  z-index: 2
+  li.selected
+    background: $manila
+    border-bottom-color: $manila
+    color: #000
+    z-index: 2
 
 #tabbed_content_pane
   background-image: image-url('manila_folder_background.jpg')
@@ -56,20 +68,21 @@
   background-size: 100% 100%
 
   width: 100%
-  min-height: 800px
+  min-height: 40em
+  border-top: 1px solid #000
   border-right: 1px solid #000
   border-left: 1px solid #000
   border-bottom: 1px solid #000
 
-  border-top-right-radius: 6px
-  border-bottom-left-radius: 6px
-  border-bottom-right-radius: 6px
+  border-top-right-radius: $rounding_raidus
+  border-bottom-left-radius: $rounding_raidus
+  border-bottom-right-radius: $rounding_raidus
 
 #tabbed_content_pane.upper_right_rounded_corner
-  border-top-left-radius: 6px
+  border-top-left-radius: $rounding_raidus
 
 .tabbed_content
-  padding: 10px
+  padding: 1em
 
 .tabbed_content:not(.selected)
   display: none

@@ -1,18 +1,35 @@
 
+@media (min-width: 33em)
+  #site_owner_name
+    font-size: 300%
+  #tagline
+    font-size: 150%
+
+@media (min-width: 28em) and (max-width: 33em)
+  #site_owner_name
+    font-size: 230%
+  #tagline
+    font-size: 130%
+
+@media (max-width: 28em)
+  #site_owner_name
+    font-size: 200%
+  #tagline
+    font-size: 115%
+
 #site_owner_name, #tagline
   color: white
-  text-shadow: 3px 3px 8px black
+  text-decoration: none
+  text-shadow: 0.1em 0.1em 0.2em black
   font-family: franklin_gothic_condensed
 
 #site_owner_name
-  font-size: 300%
-  line-height: 100%
+  line-height: 20%
 
 #tagline
-  top: -4px
-  font-size: 150%
-  margin-left: 0.1em
-  margin-bottom: 0.3em
+  position: relative
+  top: -0.67em
+  margin-left: 0.08em
 
 #admin_nav
   float: right

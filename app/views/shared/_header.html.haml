@@ -19,7 +19,6 @@
     #sign_out_link
       = link_to "Log out", destroy_user_session_path, method: :delete
 
-#site_owner_name
-  Nathaniel Barnes
-#tagline
-  Elegant software design for a more civilized age
+= link_to 'Nathaniel Barnes', root_url, :id => "site_owner_name"
+%br
+= link_to 'Elegant software design for a more civilized age', root_url, :id => "tagline"
