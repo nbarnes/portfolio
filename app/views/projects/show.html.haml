@@ -1,13 +1,19 @@
 = extends :tab_layout do
+
   = replace :tabs do
+
     %li#welcome_tab.tab
-      Welcome
+      %span.tab_label
+        Welcome
     %li#projects_tab.tab{:data => {:url => "#{request.env['ORIGINAL_FULLPATH']}"}}
-      Projects
+      %span.tab_label
+        Projects
     %li#blog_tab.tab
-      Blog
+      %span.tab_label
+        Blog
     %li#about_me_tab.tab
-      About
+      %span.tab_label
+        About
 
   = replace :content do
 

@@ -1,14 +1,19 @@
 
 
 @media (min-width: 40em)
-  .tab_row li
-    font-size: 100%
-    width: 18%
 
-@media (max-width: 40em)
-  .tab_row li
-    font-size: 90%
-    width: 13%
+  .tab_label
+    font-size: 150%
+    left: 0.1em
+
+@media (min-width: 30em) and (max-width: 40em)
+  .tab_label
+    font-size: 120%
+    left: 0.1em
+
+@media (max-width: 30em)
+  .tab_label
+    font-size: 100%
 
 $manila: #F6F2D0
 $desaturated: #e3d770
@@ -41,11 +46,13 @@ $rounding_raidus: 0.4em
   li
     font-family: franklin_gothic_condensed
     position: relative
+    line-height: 1em
+    width: 18%
     top: 1px
-    margin: 0 -0.3em
-    padding: 1.3em
+    left: -2px
+    margin: 0 -0.2em
+    padding: 0.5em
     z-index: 0
-    line-height: 0em
     border: 1px solid #000
     display: inline-block
     border-top-left-radius: $rounding_raidus
@@ -61,6 +68,10 @@ $rounding_raidus: 0.4em
     border-bottom-color: $manila
     color: #000
     z-index: 2
+
+.tab_label
+  position: relative
+  top: -0.1em
 
 #tabbed_content_pane
   background-image: image-url('manila_folder_background.jpg')
