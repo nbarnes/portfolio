@@ -1,24 +1,30 @@
 
-#admin_nav
+#header_pane
+  #admin_nav
 
-  #flash_display
-    - flash.each do |key, value|
-      %div{:class => '<%=flash_class(key) %>'}
-      = value
-  %br
-
-
-  - if signed_in?
-    %span.signed_in_label
-      Logged in as
-
-      %span#logged_in_user_email
-        = current_user.email
-
+    #flash_display
+      - flash.each do |key, value|
+        %div{:class => '<%=flash_class(key) %>'}
+        = value
     %br
-    #sign_out_link
-      = link_to "Log out", destroy_user_session_path, method: :delete
 
-= link_to 'Nathaniel Barnes', root_url, :id => "site_owner_name"
-%br
-= link_to 'Elegant software design for a more civilized age', root_url, :id => "tagline"
+
+    - if signed_in?
+      %span.signed_in_label
+        Logged in as
+
+        %span#logged_in_user_email
+          = current_user.email
+
+      %br
+      #sign_out_link
+        = link_to "Log out", destroy_user_session_path, method: :delete
+
+
+  #header_portrait
+    = image_tag 'nbarnes_portrait_2014.JPG', id: 'header_portrait_image'
+
+  #header_text
+    = link_to 'Nathaniel Barnes', root_url, :id => "site_owner_name"
+    %br
+    =link_to 'Elegant software design for a more civilized age', root_url, :id => "tagline"

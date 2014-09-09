@@ -16,9 +16,11 @@
 
   <body class="<%= controller_name %> <%= action_name %>" %>
 
-    <%= render 'shared/header' %>
+    <div id='wrapper'>
+      <%= render 'shared/header' %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
   </body>
 
