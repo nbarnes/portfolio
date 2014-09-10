@@ -1,17 +1,23 @@
 
 #header_pane
-  #admin_nav
 
-    #flash_display
-      - flash.each do |key, value|
-        %div{:class => '<%=flash_class(key) %>'}
-        = value
-    %br
+  #flash_display
+    - flash.each do |key, value|
+      %div{:class => '<%=flash_class(key) %>'}
+      = value
+  %br
 
   #header_portrait
-    = image_tag 'nath1_cropped.jpg', id: 'header_portrait_image'
+    = link_to root_url do
+      = image_tag 'nath1_cropped.jpg', id: 'header_portrait_image'
 
   #header_text
     = link_to 'Nathaniel Barnes', root_url, :id => "site_owner_name"
     %br
-    =link_to 'Elegant software design for a more civilized age', root_url, :id => "tagline"
+    = link_to 'Elegant software design for a more civilized age', root_url, :id => "tagline"
+
+  #external_links
+    twitter
+    github
+    email
+    linkedin
