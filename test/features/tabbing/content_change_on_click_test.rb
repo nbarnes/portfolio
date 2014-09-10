@@ -8,27 +8,27 @@ feature 'Content in the view area changes based on tab clicks' do
 
     visit welcome_path
 
-    page.must_have_content 'Welcome to my portfolio and blog!'
+    page.must_have_content 'Hello, my name is Nathaniel Barnes'
     page.wont_have_content 'Portfolio Platform'
 
     page.find('#projects_tab').click
 
     page.must_have_content 'Portfolio Platform'
-    page.wont_have_content 'Welcome to my portfolio and blog!'
+    page.wont_have_content 'Hello, my name is Nathaniel Barnes'
     page.wont_have_content 'post1_title'
 
     page.find('#blog_tab').click
 
     page.must_have_content 'post1_title'
     page.wont_have_content 'Portfolio Platform'
-    page.wont_have_content 'Welcome to my portfolio and blog!'
+    page.wont_have_content 'Hello, my name is Nathaniel Barnes'
 
     page.find('#about_me_tab').click
 
     page.must_have_content 'I am tall and live 20 minutes east of Seattle'
     page.wont_have_content 'post1_title'
     page.wont_have_content 'Portfolio Platform'
-    page.wont_have_content 'Welcome to my portfolio and blog!'
+    page.wont_have_content 'Hello, my name is Nathaniel Barnes'
 
     page.find('#projects_tab').click
 
