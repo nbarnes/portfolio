@@ -21,11 +21,11 @@
     %span.contact_link
       = image_tag 'email_icon.png', id: 'email_icon'
       %span#email_text
-        nbarnes@gmail.com
+        = link_to 'nbarnes@gmail.com', 'mailto:nbarnes@gmail.com'
     %span.contact_link
       = image_tag 'Twitter_logo_blue.png', id: 'twitter_icon'
       %span#twitter_text
-        @foxbarnes
+        = link_to '@foxbarnes', 'https://twitter.com/FoxBarnes'
     %br
     %span.contact_link
       = image_tag 'InBug-60px-TM.png', id: 'linkedin_icon'
