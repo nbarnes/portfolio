@@ -17,6 +17,7 @@
   <body class="<%= controller_name %> <%= action_name %>" %>
 
     <div id='wrapper'>
+      <%= render 'shared/login_status_header' %>
       <%= render 'shared/header' %>
 
       <%= yield %>

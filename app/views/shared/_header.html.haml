@@ -8,19 +8,6 @@
         = value
     %br
 
-
-    - if signed_in?
-      %span.signed_in_label
-        Logged in as
-
-        %span#logged_in_user_email
-          = current_user.email
-
-      %br
-      #sign_out_link
-        = link_to "Log out", destroy_user_session_path, method: :delete
-
-
   #header_portrait
     = image_tag 'nath1_cropped.jpg', id: 'header_portrait_image'
 
