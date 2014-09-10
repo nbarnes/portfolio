@@ -50,7 +50,7 @@
   #contact_links
     padding-top: 0.5em
 
-@media (max-width: 34em)
+@media (min-width: 20em) and (max-width: 34em)
   #header_pane
     padding-left: 1em
   #header_portrait
@@ -72,3 +72,50 @@
 
   .tab_label
     font-size: 100%
+
+@media (max-width: 20em)
+  #header_pane
+    padding-left: 1em
+  #header_portrait
+    overflow: hidden
+    width: 4em
+    height: 4em
+    margin-left: auto
+    margin-right: auto
+    margin-top: -1em
+  #header_text
+    padding-top: 0.5em
+    margin-left: -0.5em
+  #site_owner_name
+    font-size: 150%
+    margin-top: -5em
+  #tagline
+    font-size: 90%
+  #tagline
+    top: -0.67em
+    margin-left: 0.08em
+
+  #tab_pane
+    li
+      top: 5px
+      left: -1px
+
+  .tab_label
+    font-size: 80%
+  .title
+    font-size: 130%
+  .content
+    font-size: 70%
+
+  #footer_contact_links
+    margin-top: -0.8em
+
+@media (max-width: 49em)
+  #header_contact_links
+    display: none
+
+@media (min-width: 49em)
+  #footer_contact_links
+    display: none
+  #contact_links br
+    display: none
