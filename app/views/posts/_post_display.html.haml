@@ -8,14 +8,36 @@
       %span.unpublished_label
         \ - Unpublished
     %br
-    = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
-    %br
+
+
+    - if ( !(controller_name == 'posts' && action_name == 'show') )
+      = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
+      %br
+
     = markdown post.content
     %br
     .author_tagline
       Posted By:
       = post.author.email
       = post.created_at.strftime("on %A, the #{post.created_at.day.ordinalize} of %B, %Y")
+
+    - if ( controller_name == 'posts' && action_name == 'show' )
+      #disqus_thread
+      :javascript
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://YOUR-SITE.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+      %noscript
+        Please enable JavaScript to view the
+        %a{:href=>"http://disqus.com/?ref_noscript=YOUR-SITE"}
+          comments
+        powered by Disqus.
+      %a.dsq-brlink{:href=>"http://disqus.com"}
+        comments powered by
+        %span.logo-disqus Disqus
 
   - else
     No post with ID found

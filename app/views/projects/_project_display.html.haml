@@ -8,12 +8,34 @@
       %span.unpublished_label
         \ - Unpublished
     %br
-    = link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link"
+
+    - if ( !(controller_name == 'projects' && action_name == 'show') )
+      = link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link"
 
     = markdown project.content
+
     .project_image
       - if project.image != ""
         = image_tag project.image, class: 'project_image'
+
+
+    - if ( controller_name == 'projects' && action_name == 'show' )
+      #disqus_thread
+      :javascript
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://YOUR-SITE.disqus.com/embed.js';
+           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+      %noscript
+        Please enable JavaScript to view the
+        %a{:href=>"http://disqus.com/?ref_noscript=YOUR-SITE"}
+          comments
+        powered by Disqus.
+      %a.dsq-brlink{:href=>"http://disqus.com"}
+        comments powered by
+        %span.logo-disqus Disqus
 
   - else
     No project with that ID found
