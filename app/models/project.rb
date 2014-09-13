@@ -3,5 +3,5 @@ class Project < ActiveRecord::Base
 
   attr_accessible :title, :content, :image, :published
 
-  validates :title, length: { in: 4..255 }
+  validates :title, length: { in: 4..262144 }
 end

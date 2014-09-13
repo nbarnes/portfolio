@@ -27,6 +27,7 @@
 
     #blog_content.tabbed_content
       = link_to '<- Return to blog index', posts_path, :class => "content"
+      %br
       = render "posts/post_display", post: @post
 
     #about_me_content.tabbed_content

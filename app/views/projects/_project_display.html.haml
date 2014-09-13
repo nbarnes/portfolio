@@ -11,12 +11,13 @@
 
     - if ( !(controller_name == 'projects' && action_name == 'show') )
       = link_to "Comments", project_path(project, anchor: 'disqus_thread'), :class => "entry_comments_link"
+    %br
+
+
+    - if project.image != ""
+      = image_tag project.image, class: 'project_image'
 
     = markdown project.content
-
-    .project_image
-      - if project.image != ""
-        = image_tag project.image, class: 'project_image'
 
 
     - if ( controller_name == 'projects' && action_name == 'show' )
