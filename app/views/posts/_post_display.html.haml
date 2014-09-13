@@ -9,16 +9,15 @@
         \ - Unpublished
     %br
 
-    - if ( !(controller_name == 'posts' && action_name == 'show') )
-      = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
-      %br
+    %div.clearfix
+      %div.post_comment_count
+        - if ( !(controller_name == 'posts' && action_name == 'show') )
+          = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
+      %div.post_timestamp
+        = post.created_at.strftime("%A, the #{post.created_at.day.ordinalize} of %B, %Y")
 
     = markdown post.content
     %br
-    .author_tagline
-      Posted By:
-      = post.author.email
-      = post.created_at.strftime("on %A, the #{post.created_at.day.ordinalize} of %B, %Y")
 
     - if ( controller_name == 'posts' && action_name == 'show' )
       #disqus_thread
