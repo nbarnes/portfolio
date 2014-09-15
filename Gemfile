@@ -2,17 +2,18 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.19'
 
-gem 'pg'
-gem 'devise'
+gem 'pg' # PostgreSQL database
+gem 'devise' # authorization
 gem 'minitest-rails'
 gem 'minitest-rails-capybara'
 gem 'haml'
-gem 'nestive'
-gem 'pundit'
-gem 'redcarpet'
-gem 'figaro'
+gem 'nestive' # Nested layouts and partials
+gem 'pundit' # Authorization
+gem 'redcarpet' # Markdown
+gem 'figaro' # secret key hiding
 gem 'omniauth-twitter'
 gem 'coveralls', require: false
+gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,8 +31,8 @@ end
 group :development do
   gem 'brakeman', :require => false
   gem 'rails_best_practices'
-  gem 'spring'
-  gem 'launchy'
+  gem 'spring' # Keep rails server running between test runs for speed
+  gem 'launchy' # Allow launching browser from binding.pry
 end
 
 group :development, :test do
@@ -41,8 +42,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'turn'
-  gem 'simplecov'
+  gem 'turn' # prettier test output
+  gem 'simplecov' # Test code coverage
 end
 
 gem 'jquery-rails'
