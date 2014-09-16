@@ -146,6 +146,7 @@ GEM
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth (0.4.7)
+    oembed (0.1.0)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -292,6 +293,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   nestive
+  oembed
   omniauth-twitter
   pg
   pry-debugger

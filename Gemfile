@@ -13,6 +13,8 @@ gem 'redcarpet' # Markdown
 gem 'figaro' # secret key hiding
 gem 'omniauth-twitter'
 gem 'coveralls', require: false
+
+gem 'oembed'
 gem 'twitter'
 
 # Gems used only for assets and not required
