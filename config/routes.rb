@@ -20,7 +20,7 @@ Portfolio::Application.routes.draw do
   get 'projects/admin'
   get 'posts/admin'
 
-  get 'twitter', to: 'twitter#index'
+  # get 'twitter', to: 'twitter#index'
 
   resources :posts do
     member do

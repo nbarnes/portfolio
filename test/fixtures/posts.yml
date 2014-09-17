@@ -1,30 +1,34 @@
 post1:
   title: post1_title
   content: Ex ea commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate. Congue nihil imperdiet doming id quod mazim placerat. Soluta nobis eleifend; option facer possim assum typi non habent claritatem. In vulputate velit esse molestie consequat vel illum dolore eu feugiat nulla facilisis at. Nonummy nibh euismod, tincidunt ut laoreet dolore magna aliquam erat. Hendrerit vero eros et accumsan et iusto odio dignissim. Minim veniam quis nostrud exerci tation ullamcorper suscipit lobortis. Gothica quam nunc putamus parum claram anteposuerit litterarum formas humanitatis per. Claritatem Investigationes demonstraverunt; lectores legere me lius quod? Etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum mirum est notare quam littera. Nobis eleifend option congue nihil imperdiet doming id quod mazim!
-
   author: fox
   published: true
+  created_at: 12/04/2010 12:00:00.0000
 
 post2:
   title: post2_title
   content: Ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper suscipit. In hendrerit in vulputate velit esse molestie consequat vel illum dolore eu feugiat? Claritatem Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam. Imperdiet doming id quod mazim placerat facer possim? Diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat lobortis nisl ut! Option congue nihil assum, typi non habent claritatem. Anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima eodem. Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud? Et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Facilisi nam liber tempor cum soluta nobis, eleifend option congue. Nibh euismod tincidunt ut exerci tation ullamcorper suscipit lobortis? Diam nonummy nisl ut aliquip ex ea commodo consequat duis autem vel. Littera gothica quam, nunc putamus parum claram anteposuerit litterarum formas humanitatis per seacula? Sed eum iriure dolor in hendrerit in vulputate! Velit esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros dolore!
   author: fox
   published: false
+  created_at: 12/02/2010 12:00:00.0000
 
 post3:
   title: post3_title
   content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.
   author: fox
   published: true
+  created_at: 12/08/2010 12:00:00.0000
 
 post4:
   title: post4_title
   content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.
   author: fox
   published: true
+  created_at: 1/25/2011 12:00:00.0000
 
 post5:
   title: post5_title
   content: This is the content of fixture post5.
   author: fox
   published: false
+  created_at: 11/22/2010 12:00:00.0000

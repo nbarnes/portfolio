@@ -17,6 +17,8 @@ gem 'coveralls', require: false
 gem 'oembed'
 gem 'twitter'
 
+gem 'whenever' # recurring task running aka cron jobs
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -1,5 +1,15 @@
 module PostsHelper
 
+  def update_local_tweets
+    current_max_id = EmbeddableTweet.last.id
+
+    tweet_options = {:include_rts => true, :count => 200, :since_id => current_max_id}
+    puts "New tweet"
+    new_tweets = $twitter_client.user_timeline('foxbarnes', tweet_options)
+
+    oembed_options = {:omit_script => true}
+    new_oembeds = $twitter_client.oembeds(new_tweets, oembed_options)
+
   # def update_local_tweets
   #   current_local_id = EmbeddableTweet.last.id
   #   remote_tweets = Twitter.since_id(current_local_id)
@@ -14,6 +24,6 @@ module PostsHelper
   # end
 
   # def get_most_recent_local_tweet_id
-  # end
+  end
 
 end

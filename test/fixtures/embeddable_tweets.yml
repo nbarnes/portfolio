@@ -1,0 +1,29 @@
+tweet1:
+  tweet_id: 511982495936806913
+  oembed_html: !xml |
+               <blockquote class="twitter-tweet"><p>This is the tweet content for the :tweet1 fixture</p>&mdash; Nathaniel Barnes (@FoxBarnes) <a href="https://twitter.com/FoxBarnes/status/511982495936806913">Dec 05, 2010</a></blockquote>
+  tweet_timestamp: 12/05/2010 12:00:00.0000
+
+tweet2:
+  tweet_id: 511982495936806914
+  oembed_html: !xml |
+               <blockquote class="twitter-tweet"><p>This is the tweet content for the :tweet2 fixture</p>&mdash; Nathaniel Barnes (@FoxBarnes) <a href="https://twitter.com/FoxBarnes/status/511982495936806913">Dec 10, 2010</a></blockquote>
+  tweet_timestamp: 12/10/2010 12:00:00.0000
+
+tweet3:
+  tweet_id: 511982495936806915
+  oembed_html: !xml |
+               <blockquote class="twitter-tweet"><p>This is the tweet content for the :tweet3 fixture</p>&mdash; Nathaniel Barnes (@FoxBarnes) <a href="https://twitter.com/FoxBarnes/status/511982495936806913">September 16, 2014</a></blockquote>
+  tweet_timestamp: 12/07/2010 12:00:00.0000
+
+tweet4:
+  tweet_id: 511982495936806916
+  oembed_html: !xml |
+               <blockquote class="twitter-tweet"><p>This is the tweet content for the :tweet4 fixture</p>&mdash; Nathaniel Barnes (@FoxBarnes) <a href="https://twitter.com/FoxBarnes/status/511982495936806913">September 16, 2014</a></blockquote>
+  tweet_timestamp: 12/12/2010 12:00:00.0000
+
+tweet5:
+  tweet_id: 511982495936806917
+  oembed_html: !xml |
+               <blockquote class="twitter-tweet"><p>This is the tweet content for the :tweet5 fixture</p>&mdash; Nathaniel Barnes (@FoxBarnes) <a href="https://twitter.com/FoxBarnes/status/511982495936806913">September 16, 2014</a></blockquote>
+  tweet_timestamp: 11/28/2010 12:00:00.0000
