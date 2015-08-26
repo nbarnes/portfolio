@@ -7,6 +7,7 @@ gem 'devise' # authorization
 gem 'minitest-rails'
 gem 'minitest-rails-capybara'
 gem 'haml'
+gem 'autoprefixer-rails'
 gem 'nestive' # Nested layouts and partials
 gem 'pundit' # Authorization
 gem 'redcarpet' # Markdown
