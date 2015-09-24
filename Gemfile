@@ -2,13 +2,12 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.19'
 
-gem 'pg' # PostgreSQL database
-gem 'devise' # authorization
-gem 'minitest-rails'
-gem 'minitest-rails-capybara'
+gem 'pg'
+gem 'jquery-rails'
 gem 'haml'
 gem 'autoprefixer-rails'
 gem 'nestive' # Nested layouts and partials
+gem 'devise' # authentication
 gem 'pundit' # Authorization
 gem 'redcarpet' # Markdown
 gem 'figaro' # secret key hiding
@@ -20,6 +19,8 @@ gem 'twitter'
 
 gem 'whenever' # recurring task running aka cron jobs
 
+# gem 'unicorn'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -29,26 +30,25 @@ group :assets do
 end
 
 group :production do
-  # For Heroku
   gem 'rails_12factor'
 end
 
 group :development do
   gem 'brakeman', :require => false
   gem 'rails_best_practices'
-  gem 'spring' # Keep rails server running between test runs for speed
-  gem 'launchy' # Allow launching browser from binding.pry
+  gem 'spring'
+  gem 'launchy'
 end
 
 group :development, :test do
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
   gem 'pry-rails'
   gem 'pry-debugger'
-  gem 'capybara-webkit'
 end
 
 group :test do
-  gem 'turn' # prettier test output
   gem 'simplecov' # Test code coverage
+  gem 'capybara-webkit'
+  gem 'headhunter'
 end
-
-gem 'jquery-rails'
