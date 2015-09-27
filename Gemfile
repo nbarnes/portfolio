@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 gem 'rails', '3.2.19'
 
 gem 'pg'
@@ -44,7 +44,7 @@ group :development, :test do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
   gem 'pry-rails'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
 end
 
 group :test do
