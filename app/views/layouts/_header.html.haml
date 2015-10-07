@@ -1,0 +1,21 @@
+
+#header_pane
+
+  #flash_display
+    - flash.each do |key, value|
+      %div{:class => '<%=flash_class(key) %>'}
+      = value
+  %br
+
+  #header_contact_links
+    = render ('layouts/contact_links')
+
+  #portrait_and_name_pane.clearfix.title
+    #header_portrait
+      = link_to root_url do
+        = image_tag 'nath1.jpg', id: 'header_portrait_image'
+
+    #header_text
+      = link_to 'A Lightsaber Mind', root_url, id: "site_owner_name"
+      %br
+      = link_to 'Elegant software design for a more civilized age', root_url, id: "tagline"

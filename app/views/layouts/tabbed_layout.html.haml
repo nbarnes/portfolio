@@ -1,0 +1,30 @@
+/ = extends :application do
+
+/   = replace :tabs do
+
+/     %li#welcome_tab.tab
+/       %span.tab_label
+/         Welcome
+/     %li#blog_tab.tab
+/       %span.tab_label
+/         Blog
+/     %li#projects_tab.tab
+/       %span.tab_label
+/         Projects
+/     %li#about_me_tab.tab
+/       %span.tab_label
+/         About
+
+/   = replace :content do
+
+/     #welcome_content.tabbed_content
+/       = render "static/welcome_content"
+
+/     #blog_content.tabbed_content
+/       = render "posts/index", posts: @posts
+
+/     #projects_content.tabbed_content
+/       = render "projects/index", projects: @project
+
+/     #about_me_content.tabbed_content
+/       = render "static/about_me"

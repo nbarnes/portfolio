@@ -22,9 +22,8 @@ technologies used include HTML5, CSS3, Javascript, jQuery, and Twitter
 Bootstrap.
 
 Some of the functionality provided by this platform includes user
-authentication via Devise, user authorization via Pundit, Markdown formatting
-for blog posts via Redcarpet, and unit and functional testing via Minitest
-with Capybara.
+authentication via Devise, Markdown formatting for blog posts via Redcarpet,
+and unit and functional testing via Minitest with Capybara.
 
 Continuous integration is done via travis-ci.org, with automatic deployment
 for prodution hosting at www.heroku.com

@@ -1,26 +1,13 @@
-Portfolio::Application.routes.draw do
+Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"}
+  devise_for :users
+  root :to => 'static#welcome'
 
-  devise_scope :user do
-    get "login", :to => "devise/sessions#new"
-  end
-
-  root :to => 'front_page#welcome'
-
-  get 'welcome', to: 'front_page#welcome'
-  get 'portfolio', to: 'front_page#welcome'
-  get 'projects', to: 'front_page#projects'
-  get 'posts', to: 'front_page#blog'
-  get 'blog', to: 'front_page#blog'
-  get 'about_me', to: 'front_page#about_me'
-
-  get 'posts/display'
+  get 'welcome', to: 'static#welcome'
+  get 'about_me', to: 'static#about_me'
 
   get 'projects/admin'
   get 'posts/admin'
-
-  # get 'twitter', to: 'twitter#index'
 
   resources :posts do
     member do
@@ -35,5 +22,6 @@ Portfolio::Application.routes.draw do
   end
 
   get '/*foo', to: redirect('/welcome')
+
 
 end

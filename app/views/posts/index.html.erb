@@ -18,25 +18,19 @@
     <td><%= post.author.email %></td>
     <td><%= post.created_at.to_date %></td>
     <td><%= " - " %><%= link_to 'Show', post %></td>
-    <% if policy(post).update? %>
-      <td><%= " - " %><%= link_to 'Edit', edit_post_path(post) %></td>
-    <% end %>
+    <td><%= " - " %><%= link_to 'Edit', edit_post_path(post) %></td>
 
-    <% if policy(post).destroy? %>
+    <td>
+      <%= " - " %>
+      <%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+
+    <% if post.published? %>
       <td>
-        <%= " - " %>
-        <%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-    <% end %>
-
-    <% if policy(post).toggle_published? %>
-      <% if post.published? %>
-        <td>
-      <%= " - " %><%= link_to 'Unpublish', toggle_published_post_path(post), {method: :put} %></td>
-      <% else %>
-        <td>
-      <%= " - " %><%= link_to 'Publish', toggle_published_post_path(post), {method: :put} %></td>
-      <% end %>
+    <%= " - " %><%= link_to 'Unpublish', toggle_published_post_path(post), {method: :put} %></td>
+    <% else %>
+      <td>
+    <%= " - " %><%= link_to 'Publish', toggle_published_post_path(post), {method: :put} %></td>
     <% end %>
 
   </tr>
@@ -46,4 +40,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_post_path if policy(Post).create? %>
+<%= link_to 'New Post', new_post_path %>

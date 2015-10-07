@@ -1,14 +1,10 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
-  include Pundit
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
 
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-
-  private
-
-  def user_not_authorized
-    flash[:error] = "You are not authorized to perform this action."
-    redirect_to request.headers["Referer"] || root_path
+  def admin?
+    return current_user && current_user.admin?
   end
 
 end

@@ -1,111 +1,36 @@
 class ProjectsController < ApplicationController
 
-  # restricts index, create, update, edit, and destroy to signed in users
-  before_filter :authenticate_user!, except: [:show, :display]
+  before_filter :authenticate_user!, except: [:index, :show]
 
-  # GET /projects
-  # GET /projects.json
   def index
-    @projects = policy_scope(Project)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @projects }
+    @projects = Project.all
+    if admin?
+      @projects.select { |proj| proj.published == true }
     end
   end
 
-  def admin
-    @projects = policy_scope(Project)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @projects }
-    end
-  end
-
-  # GET /projects/1
-  # GET /projects/1.json
   def show
-    @posts = policy_scope(Post)
-    begin
-      @project = Project.find(params[:id])
-    rescue ActiveRecord::RecordNotFound => e
-      @project = nil
-    end
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @project }
-    end
   end
 
-  # GET /projects/new
-  # GET /projects/new.json
   def new
-    @project = Project.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @post }
-    end
+    render 404 unless admin?
   end
 
-  # GET /projects/1/edit
-  def edit
-    @project = Project.find(params[:id])
-  end
-
-  # POST /projects
-  # POST /projects.json
   def create
-    @project = Project.new(params[:project])
-
-    respond_to do |format|
-      if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created' }
-        format.json { render json: @project, status: :created, location: @project }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
-    end
+    render 404 unless admin?
   end
 
-  # PUT /project/1
-  # PUT /project/1.json
-  def update
-    @project = Project.find(params[:id])
-
-    respond_to do |format|
-      if @project.update_attributes(params[:project])
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /project/1
-  # DELETE /project/1.json
   def destroy
-    @project = Project.find(params[:id])
-    @project.destroy
+    render 404 unless admin?
+  end
 
-    respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
+  private
+    def set_post
+      @post = Post.find(params[:id])
     end
-  end
 
-  def toggle_published
-    @project = Project.find(params[:id])
-    authorize @project
-
-    @project.update_attributes(published: !@project.published)
-
-    redirect_to projects_admin_path
-  end
+    def post_params
+      params.require(:post).permit(:title, :content, :author_id)
+    end
 
 end

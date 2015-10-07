@@ -1,9 +1,0 @@
-
-- @blog_entries.each do |blog_entry|
-  - if blog_entry.is_a? Post
-    = render 'posts/post_display', post: blog_entry
-  - elsif blog_entry.is_a? EmbeddableTweet
-    = render "twitter/tweet", embeddable_tweet: blog_entry
-  - else
-    - puts 'Unrecognized object = ' + blog_entry + ' in twitter/index'
-  %br

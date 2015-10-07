@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
-gem 'rails', '3.2.19'
+ruby '2.2.2'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 4.2'
 
 gem 'pg'
 gem 'jquery-rails'
@@ -8,14 +10,9 @@ gem 'haml'
 gem 'autoprefixer-rails'
 gem 'nestive' # Nested layouts and partials
 gem 'devise' # authentication
-gem 'pundit' # Authorization
 gem 'redcarpet' # Markdown
 gem 'figaro' # secret key hiding
-gem 'omniauth-twitter'
 gem 'coveralls', require: false
-
-gem 'oembed'
-gem 'twitter'
 
 gem 'whenever' # recurring task running aka cron jobs
 
@@ -44,7 +41,7 @@ group :development, :test do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
   gem 'pry-rails'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
 end
 
 group :test do

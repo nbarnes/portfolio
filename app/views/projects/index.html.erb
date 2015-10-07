@@ -10,7 +10,7 @@
   </tr>
 
 <% @projects.each do |project| %>
-  <tr id="project<%= dom_id(project) %>">
+  <tr id="project<%= project.id %>">
     <td><%= truncate(project.title, length: 20, separator: ' ') %></td>
     <td><%= truncate(project.content, length: 40, separator: ' ') %></td>
     <td><%= " - " %><%= link_to 'Show', project %></td>

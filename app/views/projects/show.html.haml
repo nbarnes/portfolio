@@ -5,7 +5,7 @@
     %li#welcome_tab.tab
       %span.tab_label
         Welcome
-    %li#projects_tab.tab{:data => {:url => "#{request.env['ORIGINAL_FULLPATH']}"}}
+    %li#projects_tab.tab{data: {url: "#{request.env['ORIGINAL_FULLPATH']}"}}
       %span.tab_label
         Projects
     %li#blog_tab.tab
