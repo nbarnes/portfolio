@@ -1,36 +1,54 @@
 class ProjectsController < ApplicationController
 
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :filter_admin, except: [:index, :show]
 
   def index
+    @posts = Post.all
     @projects = Project.all
-    if admin?
-      @projects.select { |proj| proj.published == true }
+    unless admin?
+      @posts.select { |post| post.published == true }
+      @projects.select { |project| project.published == true }
     end
   end
 
   def show
+    @project = Project.find(params[:id])
+    if not admin? and not @project.published
+      render 404
+    end
   end
 
   def new
-    render 404 unless admin?
   end
 
   def create
-    render 404 unless admin?
   end
 
   def destroy
-    render 404 unless admin?
+  end
+
+  def admin
+    @projects = Project.all
+  end
+
+  def toggle_published
+    if admin?
+      project = Project.find(params[:id])
+      @project.update_attributes(published: !@project.published)
+      redirect_to :admin_posts
+    else
+      render 404
+    end
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
+
+    def filter_admin
+      # redirect_to :root unless admin?
     end
 
-    def post_params
-      params.require(:post).permit(:title, :content, :author_id)
+    def project_params
+      params.require(:project).permit(:title, :content, :author_id, :image)
     end
 
 end

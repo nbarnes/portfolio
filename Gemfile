@@ -46,6 +46,7 @@ end
 
 group :test do
   gem 'simplecov' # Test code coverage
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
+  gem 'poltergeist'
   gem 'headhunter'
 end

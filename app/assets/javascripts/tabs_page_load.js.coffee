@@ -1,12 +1,12 @@
 $ ->
 
-  $('.front_page.welcome').ready ->
+  $('.static.welcome').ready ->
     select_tab( 'welcome' )
-  $('.front_page.projects').ready ->
+  $('.projects.show').ready ->
     select_tab( 'projects' )
-  $('.front_page.blog').ready ->
+  $('.posts.index').ready ->
     select_tab( 'blog' )
-  $('.front_page.about_me').ready ->
+  $('.static.about_me').ready ->
     select_tab( 'about_me' )
 
   $('.posts.show').ready ->
@@ -20,4 +20,4 @@ $ ->
     select_tab( 'projects_admin' )
 
   $('.sessions.new').ready ->
-    select_tab( 'login' )
+    select_tab( 'log_in' )

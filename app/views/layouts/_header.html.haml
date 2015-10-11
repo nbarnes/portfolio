@@ -1,10 +1,19 @@
 
 #header_pane
 
-  #flash_display
-    - flash.each do |key, value|
-      %div{:class => '<%=flash_class(key) %>'}
-      = value
+  #login_and_flash
+    - if current_user
+      You are logged in as
+      = current_user.email
+      = " - "
+      = link_to('Log out', destroy_user_session_path, :method => :delete)
+
+
+    #flash_display
+      - flash.each do |key, value|
+        %div{:class => '<%=flash_class(key) %>'}
+        = value
+  %br
   %br
 
   #header_contact_links

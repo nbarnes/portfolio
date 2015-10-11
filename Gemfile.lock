@@ -62,10 +62,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.7.1)
-      capybara (>= 2.3.0, < 2.6.0)
-      json
     chronic (0.10.2)
+    cliver (0.3.2)
     code_analyzer (0.4.5)
       sexp_processor
     coderay (1.1.0)
@@ -152,6 +150,11 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.3)
+    poltergeist (1.7.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      multi_json (~> 1.0)
+      websocket-driver (>= 0.2.0)
     pry (0.10.2)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -259,6 +262,9 @@ GEM
     unf_ext (0.0.7.1)
     warden (1.2.3)
       rack (>= 1.0)
+    websocket-driver (0.6.2)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
     whenever (0.9.4)
       chronic (>= 0.6.3)
     xpath (2.0.0)
@@ -270,7 +276,6 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   brakeman
-  capybara-webkit
   coffee-rails
   coveralls
   devise
@@ -283,6 +288,7 @@ DEPENDENCIES
   minitest-rails-capybara
   nestive
   pg
+  poltergeist
   pry-byebug
   pry-rails
   rails (~> 4.2)
