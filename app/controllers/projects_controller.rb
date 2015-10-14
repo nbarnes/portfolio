@@ -1,30 +1,38 @@
 class ProjectsController < ApplicationController
+  include ApplicationHelper
 
   before_filter :filter_admin, except: [:index, :show]
 
   def index
-    @posts = Post.all
-    @projects = Project.all
-    unless admin?
-      @posts.select { |post| post.published == true }
-      @projects.select { |project| project.published == true }
-    end
+    @posts = posts
+    @projects = projects
   end
 
   def show
+    @posts = posts
     @project = Project.find(params[:id])
     if not admin? and not @project.published
-      render 404
+      render status: 404
     end
   end
 
   def new
+    @project = Project.new
   end
 
   def create
+    @project = Project.new(project_params)
+    if @project.save
+      redirect_to @project
+    else
+      render action: 'new'
+    end
   end
 
   def destroy
+    project = Project.find(params[:id])
+    project.destroy
+    redirect_to :admin_projects
   end
 
   def admin
@@ -32,23 +40,20 @@ class ProjectsController < ApplicationController
   end
 
   def toggle_published
-    if admin?
-      project = Project.find(params[:id])
-      @project.update_attributes(published: !@project.published)
-      redirect_to :admin_posts
-    else
-      render 404
-    end
+    project = Project.find(params[:id])
+    project.published = !project.published
+    project.save!
+    redirect_to :admin_projects
   end
 
   private
 
     def filter_admin
-      # redirect_to :root unless admin?
+      redirect_to :root unless admin?
     end
 
     def project_params
-      params.require(:project).permit(:title, :content, :author_id, :image)
+      params.require(:project).permit(:title, :content, :image)
     end
 
 end

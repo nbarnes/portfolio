@@ -14,4 +14,16 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
 
+  def admin?
+    return current_user && current_user.admin?
+  end
+
+  def posts
+    admin? ? (return Post.all) : (return Post.where(published: true))
+  end
+
+  def projects
+    admin? ? (return Project.all) : (return Project.where(published: true))
+  end
+
 end

@@ -7,4 +7,5 @@
   #projects_admin_content.tabbed_content
     = render 'projects/projects_admin_display_table', projects: @projects
     %br
-    %input{type: 'button', value: 'Create New Project', class: 'create_new_button'}
+    = button_to 'Create New Project', new_project_path, method: 'get', class: 'create_new_button'
+

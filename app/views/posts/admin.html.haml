@@ -7,4 +7,4 @@
   #posts_admin_content.tabbed_content
     = render 'posts/posts_admin_display_table', posts: @posts
     %br
-    %input{type: 'button', value: 'Create New Post', class: 'create_new_button'}
+    = button_to 'Create New Post', new_post_path, method: 'get', class: 'create_new_button'

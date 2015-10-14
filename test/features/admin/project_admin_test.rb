@@ -10,7 +10,7 @@ feature 'project admin' do
     page.find_by_id('project' + projects(:cpu_analyst).id.to_s).click_on 'Publish'
     page.click_on 'Log out'
     visit projects_path
-    page.must_have_content 'CPU placement analysis'
+    page.must_have_content 'Firefall CPU Analyst'
   end
 
   scenario "Admin can delete projects" do
@@ -28,7 +28,7 @@ feature 'project admin' do
     visit admin_projects_path
     page.must_have_content 'Projects Admin'
     page.find_by_id('project' + projects(:cpu_analyst).id.to_s).click_on 'Show'
-    page.must_have_content 'CPU placement analysis'
+    page.must_have_content 'Firefall CPU Analyst'
   end
 
 end

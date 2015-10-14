@@ -1,33 +1,30 @@
-= extends :tab_layout do
 
-  = replace :tabs do
+= replace :tabs do
 
-    %li#welcome_tab.tab
-      %span.tab_label
-        Welcome
-    %li#projects_tab.tab{data: {url: "#{request.env['ORIGINAL_FULLPATH']}"}}
-      %span.tab_label
-        Projects
-    %li#blog_tab.tab
-      %span.tab_label
-        Blog
-    %li#about_me_tab.tab
-      %span.tab_label
-        About
+  %li#welcome_tab.tab
+    %span.tab_label
+      Welcome
+  %li#blog_tab.tab
+    %span.tab_label
+      Blog
+  %li#projects_tab.tab{data: {url: "#{request.env['ORIGINAL_FULLPATH']}"}}
+    %span.tab_label
+      Projects
+  %li#about_me_tab.tab
+    %span.tab_label
+      About
 
-  = replace :content do
+= replace :content do
 
-    #welcome_content.tabbed_content
-      = render "front_page/welcome_content"
+  #welcome_content.tabbed_content
+    = render "static/welcome_content"
 
-    #projects_content.tabbed_content
-      = link_to '<- Return to Projects index', projects_path, :class => "content"
-      = render "projects/project_display", project: @project
+  #projects_content.tabbed_content
+    = link_to '<- Return to Projects index', projects_path, :class => "content"
+    = render "projects/project_display", project: @project
 
-    #blog_content.tabbed_content
-      - @posts.each do |post|
-        = render "posts/post_display", post: post
-        %br
+  #blog_content.tabbed_content
+    = render "posts/index"
 
-    #about_me_content.tabbed_content
-      = render "front_page/about_me"
+  #about_me_content.tabbed_content
+    = render "static/about_me_content"

@@ -1,0 +1,13 @@
+
+- replace :tabs do
+  %li#projects_new_tab.tab
+    New Project
+
+= replace :content do
+  #projects_new_content.tabbed_content
+    %h1 New project
+
+    .new_project
+      = render 'form'
+
+    = link_to 'Back', projects_path
