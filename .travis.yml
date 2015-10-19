@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.0.0
+- 2.2.2
 script:
 - psql -c 'create database portfolio_test_postgres;' -U postgres
 - RAILS_ENV=test bundle exec rake db:migrate --trace
