@@ -1,4 +1,4 @@
-# ruby -Itest test/features/projects/view_projects_in_tab.rb
+# ruby -Itest test/features/projects/test_projects.rb
 
 require 'test_helper'
 
@@ -19,6 +19,13 @@ feature 'projects' do
   scenario "Doesn't show blog content when viewing project content" do
     visit projects_path
     page.wont_have_content 'post1_title'
+  end
+
+  scenario 'view single project by clicking on project title' do
+    visit projects_path
+    click_on 'Portfolio Platform'
+    page.must_have_content 'Portfolio Platform'
+    page.wont_have_content 'Pixel Paisan'
   end
 
 end

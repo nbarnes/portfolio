@@ -1,4 +1,4 @@
-# ruby -Itest test/features/tabbing/content_change_on_click_test.rb
+# ruby -Itest test/features/tabbing/test_tabs.rb
 
 require 'test_helper'
 
@@ -38,7 +38,7 @@ feature 'tabs' do
 
   end
 
-  scenario 'Upper right content display rounds / unrounds based on welcome selection', js: true  do
+  scenario 'Upper right content display rounds / unrounds based on welcome selection', js: true do
 
     visit blog_path
     assert page.has_css?('div.upper_right_rounded_corner'), 'Assertion has_rounded_corner failed, does not have class'

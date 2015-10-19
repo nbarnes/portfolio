@@ -19,13 +19,14 @@
   #welcome_content.tabbed_content
     = render "static/welcome_content"
 
-  #projects_content.tabbed_content
-    = render 'projects/index'
-
   #blog_content.tabbed_content
     = link_to '<- Return to blog index', posts_path, :class => "content"
     %br
+    %br
     = render "posts/post_display", post: @post
+
+  #projects_content.tabbed_content
+    = render 'projects/index'
 
   #about_me_content.tabbed_content
     = render "static/about_me_content"

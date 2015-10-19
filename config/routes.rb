@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     get "log_in", to: "devise/sessions#new"
   end
-  root 'posts#index'
 
   get 'welcome', to: 'static#welcome'
   get 'about_me', to: 'static#about_me'
@@ -29,6 +28,7 @@ Rails.application.routes.draw do
     end
   end
 
+  root 'posts#index'
   get '/*foo', to: redirect('/')
 
 end

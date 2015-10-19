@@ -10,6 +10,8 @@ AllCops:
     - 'bin/setup'
     - 'config/**/*'
     - 'config.ru'
+    - 'db/migrate/20150929184523_devise_create_users.rb'
+    - 'Rakefile'
 
 Style/Documentation:
   Enabled: false

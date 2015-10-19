@@ -11,8 +11,8 @@ class ProjectsController < ApplicationController
   def show
     @posts = posts
     @project = Project.find(params[:id])
-    if not admin? and not @project.published
-      render status: 404
+    if !@project.published
+      redirect_to root_path unless admin?
     end
   end
 

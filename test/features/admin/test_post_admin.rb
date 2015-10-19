@@ -1,8 +1,8 @@
-require "test_helper"
+require 'test_helper'
 
 feature 'project admin' do
 
-  scenario "Admin can publish and unpublish posts" do
+  scenario 'Admin can publish and unpublish posts' do
     login_fox
     visit admin_posts_path
     page.find_by_id('post' + posts(:post2).id.to_s).click_on 'Publish'
@@ -11,7 +11,7 @@ feature 'project admin' do
     page.must_have_content 'post2_title'
   end
 
-  scenario "Admin can delete posts" do
+  scenario 'Admin can delete posts' do
     login_fox
     visit admin_posts_path
     page.must_have_content 'post4_title'
@@ -21,7 +21,7 @@ feature 'project admin' do
     page.wont_have_content 'post4_title'
   end
 
-  scenario "Admin can view single posts" do
+  scenario 'Admin can view single posts' do
     login_fox
     visit admin_posts_path
     page.must_have_content 'Posts Admin'

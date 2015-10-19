@@ -1,16 +1,4 @@
 
-# possible data elements for projects
-# title
-# body_text
-# github URL
-# live site URL
-# image(s)
-# layout data?
-# Maybe this all should just be handmade in HTML for each project
-# That would handle all these cases.
-# But not very RESTful
-# Unless the entire affair is stored in the database as a string or something
-
 portfolio:
   title: Portfolio Platform
   content: Laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam quis nostrud exerci. Habent claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Nibh euismod tincidunt ut tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis. Esse molestie consequat vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et. In hendrerit in vulputate velit iusto odio dignissim qui blandit praesent. Est notare quam littera gothica quam nunc putamus parum claram anteposuerit. Nunc nobis videntur parum clari fiant sollemnes in! Dolor sit amet consectetuer adipiscing elit sed, diam nonummy autem vel eum iriure dolor luptatum. Cum soluta nobis eleifend option congue nihil imperdiet? Assum typi non me lius quod ii legunt saepius claritas est etiam processus dynamicus.

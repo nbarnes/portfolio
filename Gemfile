@@ -31,7 +31,7 @@ group :production do
 end
 
 group :development do
-  gem 'brakeman', :require => false
+  gem 'brakeman', require: false
   gem 'rails_best_practices'
   gem 'spring'
   gem 'launchy'

@@ -10,10 +10,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @projects = projects
-    if not admin? and not @post.published
-      render status: 404
+    if !@post.published
+      redirect_to root_path unless admin?
     end
+    @projects = projects
   end
 
   def new
@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
-    binding.pry
     if @post.save
       redirect_to @post
     else

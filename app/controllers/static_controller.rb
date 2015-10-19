@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+  include ApplicationHelper
 
   before_filter :indexes
 
@@ -10,12 +11,8 @@ class StaticController < ApplicationController
 
   private
     def indexes
-      @posts = Post.all
-      @projects = Project.all
-      unless admin?
-        @posts.select { |post| post.published == true }
-        @projects.select { |project| project.published == true }
-      end
+      @posts = posts
+      @projects = projects
     end
 
 end

@@ -3,20 +3,21 @@
 
   - if post != nil
 
-    = link_to post.title, post, :class => "entry_title title"
-    - if !post.published?
-      %span.unpublished_label
-        \ - Unpublished
-    %br
+    .entry_title.title
+      = link_to post.title, post
+      - if !post.published?
+        %span.unpublished_label
+          \ - Unpublished
 
-    %div.clearfix
-      %div.post_comment_count
+    .clearfix
+      .post_comment_count
         - if ( !(controller_name == 'posts' && action_name == 'show') )
-          = link_to "Comments", post_path(post, anchor: 'disqus_thread'), :class => "post_comments_link"
-      %div.post_timestamp
+          = link_to "Comments", post_path(post, anchor: 'disqus_thread')
+      .post_timestamp
         = post.created_at.strftime("%A, the #{post.created_at.day.ordinalize} of %B, %Y")
 
-    = markdown post.content
+    .entry_content
+      = markdown post.content
     %br
 
     - if ( controller_name == 'posts' && action_name == 'show' )
