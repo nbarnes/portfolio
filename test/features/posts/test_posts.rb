@@ -1,3 +1,4 @@
+
 # ruby -Itest test/features/projects/test_posts.rb
 
 require 'test_helper'
@@ -25,7 +26,7 @@ feature 'posts' do
     visit blog_path
     click_on 'post3_title'
     page.must_have_content 'post3_title'
-    page.wont_have_content 'post2_title
+    page.wont_have_content 'post2_title'
   end
 
 end

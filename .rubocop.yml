@@ -33,3 +33,7 @@ Style/EmptyLinesAroundBlockBody:
 
 Style/RedundantReturn:
   Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+

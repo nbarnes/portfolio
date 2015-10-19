@@ -14,6 +14,7 @@ require 'minitest/rails'
 require 'minitest/rails/capybara'
 require 'capybara/poltergeist'
 
+# rubocop:disable Style/ClassAndModuleChildren
 class ActiveSupport::TestCase
   fixtures :all
   self.use_transactional_fixtures = true

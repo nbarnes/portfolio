@@ -10,9 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    if !@post.published
-      redirect_to root_path unless admin?
-    end
+    redirect_to root_path unless @post.published || admin?
     @projects = projects
   end
 
