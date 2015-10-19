@@ -1,9 +1,8 @@
 language: ruby
-rvm:
-- 2.2.2
-before_script:
-- psql -c 'create database portfolio/test;' -U postgres
+rvm: - 2.2.2
+sudo: false
 script:
+- psql -c 'create database portfolio/test;' -U postgres
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake
