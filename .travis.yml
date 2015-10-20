@@ -1,6 +1,9 @@
 language: ruby
-rvm: - 2.2.2
+rvm:
+- 2.2.2
 sudo: false
+addons:
+  postgresql: "9.3"
 script:
 - psql -c 'create database portfolio/test;' -U postgres
 - RAILS_ENV=test bundle exec rake db:migrate --trace
@@ -16,6 +19,3 @@ deploy:
     repo: nbarnes/Portfolio
   run:
     - 'rake db:migrate'
-addons:
-  postgresql: "9.3"
-
