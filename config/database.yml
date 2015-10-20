@@ -6,12 +6,12 @@ default: &default
 
 development:
   <<: *default
-  database: portfolio/dev
+  database: portfolio_dev
 
 test:
   <<: *default
-  database: portfolio/test
+  database: portfolio_test
 
 production:
   <<: *default
-  database: portfolio/prod
+  database: portfolio_prod
