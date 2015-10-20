@@ -16,6 +16,6 @@ deploy:
     secure: dJorqYFF62fkQHnqQrU/tWRhdzBB3Zji4QGEhtln1ddAQL/k/hi1u/k18MtLYOdXm926DewAGb4iER5495C426vNBsIVqKR9z9vdecqnJAZqD3pIWpmLE1H03yqhZcXKRXT3HvX+3G0woKSi9RGQGj5CgOohjBQMH81fj7rgwWY=
   app: nbarnes
   on:
-    repo: nbarnes/Portfolio
+    repo: nbarnes/portfolio
   run:
     - 'rake db:migrate'
