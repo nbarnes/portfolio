@@ -14,6 +14,20 @@ class PostsController < ApplicationController
     @projects = projects
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      flash[:success] = "Profile updated"
+      redirect_to @post
+    else
+      render edit
+    end
+  end
+
   def new
     @post = Post.new
   end

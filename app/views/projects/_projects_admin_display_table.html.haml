@@ -1,17 +1,12 @@
 %table.projects_display_table
   %tr#project_table_header_row.title
-    %th
-      Created At
-    %th
-      Title
-    %th
-      Content
-    %th
-      Open
-    %th
-      Delete
-    %th
-      Published
+    %th Created At
+    %th Title
+    %th Content
+    %th Show
+    %th Edit
+    %th Delete
+    %th Published
 
   - @projects.each do |project|
     %tr{:id => ['project' + project.id.to_s], :class => 'project_row'}
@@ -24,6 +19,8 @@
 
       %td
         = link_to 'Show', project
+      %td
+        = link_to 'Edit', [:edit, project]
       %td
         = link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 

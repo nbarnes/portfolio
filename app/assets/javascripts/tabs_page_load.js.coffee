@@ -15,6 +15,8 @@ $ ->
     select_tab( 'posts_admin' )
   $('.posts.new').ready ->
     select_tab( 'posts_new' )
+  $('.posts.edit').ready ->
+    select_tab( 'posts_edit' )
 
   $('.projects.index').ready ->
     select_tab( 'projects' )
@@ -24,6 +26,8 @@ $ ->
     select_tab( 'projects_admin' )
   $('.projects.new').ready ->
     select_tab( 'projects_new' )
+  $('.projects.edit').ready ->
+    select_tab( 'projects_edit' )
 
   $('.sessions.new').ready ->
     select_tab( 'log_in' )

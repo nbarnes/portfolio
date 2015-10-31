@@ -1,17 +1,12 @@
 %table.posts_display_table
   %tr#post_table_header_row.title
-    %th
-      Created At
-    %th
-      Title
-    %th
-      Content
-    %th
-      Open
-    %th
-      Delete
-    %th
-      Published
+    %th Created At
+    %th Title
+    %th Content
+    %th Show
+    %th Edit
+    %th Delete
+    %th Published
 
   - @posts.each do |post|
     %tr{:id => ['post' + post.id.to_s], :class => 'post_row'}
@@ -24,6 +19,8 @@
 
       %td
         = link_to 'Show', post
+      %td
+        = link_to 'Edit', [:edit, post]
       %td
         = link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }
 

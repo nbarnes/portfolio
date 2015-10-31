@@ -14,6 +14,20 @@ class ProjectsController < ApplicationController
     redirect_to root_path unless @project.published || admin?
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:success] = "Project updated"
+      redirect_to @project
+    else
+      render edit
+    end
+  end
+
   def new
     @project = Project.new
   end
