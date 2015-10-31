@@ -8,7 +8,7 @@ feature 'projects' do
     visit projects_path
     page.must_have_content 'Nathaniel Barnes'
     page.must_have_content 'Portfolio Platform'
-    page.must_have_content 'Searchable sortable Trakehner horses'
+    page.must_have_content 'Quoniamque non dubium est quin in iis'
   end
 
   scenario "Doesn't show unpublished projects" do
@@ -30,7 +30,7 @@ feature 'projects' do
     page.wont_have_content 'test project title'
   end
 
-  scenario "Doesn't show blog content when viewing project content" do
+  scenario "Doesn't show blog content when viewing project content", js: true do
     visit projects_path
     page.wont_have_content 'post1_title'
   end
@@ -40,6 +40,30 @@ feature 'projects' do
     click_on 'Portfolio Platform'
     page.must_have_content 'Portfolio Platform'
     page.wont_have_content 'Pixel Paisan'
+  end
+
+  scenario 'edit post' do
+    login_fox
+    visit admin_projects_path
+
+    page.must_have_content 'Pixel Paisan'
+    page.wont_have_content 'pixel_title'
+    page.must_have_content 'Summum autem bonum si ignoretur'
+    page.wont_have_content 'pixel_content'
+
+    page.find_by_id('project' + projects(:pixel_paisan).id.to_s).click_on 'Edit'
+
+    fill_in 'Title', with: 'pixel_title'
+    fill_in 'Content', with: 'pixel_content'
+    click_on 'Update Project'
+
+    visit admin_projects_path
+
+    page.must_have_content 'pixel_title'
+    page.wont_have_content 'Pixel Paisan'
+    page.must_have_content 'pixel_content'
+    page.wont_have_content 'Summum autem bonum si ignoretur'
+
   end
 
   scenario 'test project image creation' do

@@ -46,7 +46,7 @@ feature 'tabs' do
     refute page.has_css?('div.upper_right_rounded_corner'), 'Refutation has_rounded_corner failed, does have class'
     visit projects_path
     assert page.has_css?('div.upper_right_rounded_corner'), 'Assertion has_rounded_corner failed, does not have class'
-    visit login_path
+    visit log_in_path
     refute page.has_css?('div.upper_right_rounded_corner'), 'Refutation has_rounded_corner failed, does have class'
 
   end

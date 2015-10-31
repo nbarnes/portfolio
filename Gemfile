@@ -48,5 +48,6 @@ group :test do
   gem 'simplecov' # Test code coverage
   # gem 'capybara-webkit'
   gem 'poltergeist'
+  gem 'phantomjs', require: 'phantomjs/poltergeist'
   gem 'headhunter'
 end
