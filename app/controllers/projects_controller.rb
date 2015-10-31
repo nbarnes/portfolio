@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.find(params[:id])
     if @project.update_attributes(project_params)
-      flash[:success] = "Project updated"
+      flash[:success] = 'Project updated'g
       redirect_to @project
     else
       render edit
