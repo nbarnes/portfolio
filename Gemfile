@@ -13,6 +13,8 @@ gem 'devise' # authentication
 gem 'redcarpet' # Markdown
 gem 'figaro' # secret key hiding
 gem 'coveralls', require: false
+gem 'paperclip'
+gem 'aws-sdk'
 
 gem 'whenever' # recurring task running aka cron jobs
 

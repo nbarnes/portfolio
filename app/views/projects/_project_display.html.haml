@@ -1,5 +1,5 @@
 
-.project.content
+.project.content.clearfix
 
   - if project != nil
 
@@ -13,8 +13,8 @@
       = link_to "Comments", project_path(project, anchor: 'disqus_thread')
     %br
 
-    - if project.image != ""
-      = image_tag project.image, class: 'project_image'
+    - if project.screenshot
+      = image_tag project.screenshot.url(:display)
 
     .entry_content
       = markdown project.content
