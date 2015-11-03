@@ -1,5 +1,5 @@
 
-<%= form_for(@project) do |f| %>
+<%= form_for @project , html: {multipart: true} do |f| %>
 
   <% if @project.errors.any? %>
     <div id="error_explanation">

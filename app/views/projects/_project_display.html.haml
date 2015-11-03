@@ -13,8 +13,7 @@
       = link_to "Comments", project_path(project, anchor: 'disqus_thread')
     %br
 
-    - if project.screenshot
-      = image_tag project.screenshot.url(:display)
+    = image_tag project.screenshot_url(:display).to_s
 
     .entry_content
       = markdown project.content
