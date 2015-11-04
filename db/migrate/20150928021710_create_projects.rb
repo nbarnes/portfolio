@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title, null: false
       t.string :content
       t.string :link_to
-      t.string :screenshot
+      t.string :image
       t.boolean :published, null: false, default: false
 
       t.timestamps
