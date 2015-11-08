@@ -7,6 +7,10 @@
       = current_user.email
       = " - "
       = link_to('Log out', destroy_user_session_path, :method => :delete)
+      = " - "
+      = link_to('Posts Admin', admin_posts_path)
+      = " - "
+      = link_to('Projects Admin', admin_projects_path)
 
 
     #flash_display
