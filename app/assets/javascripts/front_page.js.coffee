@@ -1,3 +1,4 @@
+
 $ ->
 
   $('#welcome_tab').click ->
