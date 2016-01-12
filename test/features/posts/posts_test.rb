@@ -40,14 +40,14 @@ feature 'posts' do
     visit blog_path
     click_on 'post3_title'
     page.must_have_content 'post3_title'
-    page.wont_have_content 'post2_title'
+    page.wont_have_content 'This title is very long and will help test long titles'
   end
 
   scenario 'edit post' do
     login_fox
     visit admin_posts_path
 
-    page.must_have_content 'post2_title'
+    page.must_have_content 'This title is...'
     page.wont_have_content 'post2_1_title'
     page.must_have_content 'Ut wisi enim ad minim'
     page.wont_have_content 'post2_1_content'
@@ -61,7 +61,7 @@ feature 'posts' do
     visit admin_posts_path
 
     page.must_have_content 'post2_1_title'
-    page.wont_have_content 'post2_title'
+    page.wont_have_content 'This title is very long and will help test long titles'
     page.must_have_content 'post2_1_content'
     page.wont_have_content 'Ut wisi enim ad minim'
   end
