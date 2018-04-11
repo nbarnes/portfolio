@@ -43,6 +43,8 @@ group :development, :test do
   gem 'minitest-rails-capybara'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'bundle-audit', require: false
+  gem 'rubocop', '~> 0.54', require: false
 end
 
 group :test do
