@@ -1,14 +1,14 @@
 language: ruby
 rvm:
-- 2.2.2
+  - 2.3.0
 sudo: false
 addons:
   postgresql: "9.3"
 script:
-- psql -c 'create database portfolio_test;' -U postgres
-- RAILS_ENV=test bundle exec rake db:migrate --trace
-- bundle exec rake db:test:prepare
-- bundle exec rake
+  - psql -c 'create database portfolio_test;' -U postgres
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
 bundler_args: --binstubs=./bundler_stubs
 deploy:
   provider: heroku
@@ -18,4 +18,4 @@ deploy:
   on:
     repo: nbarnes/portfolio
   run:
-    - 'rake db:migrate'
+    - "rake db:migrate"
