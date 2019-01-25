@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2'
 
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'jquery-rails'
 gem 'haml'
 gem 'autoprefixer-rails'
