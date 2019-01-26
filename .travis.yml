@@ -9,13 +9,13 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rake
-bundler_args: --binstubs=./bundler_stubs
+bundler_args: "--binstubs=./bundler_stubs"
 deploy:
   provider: heroku
   api_key:
-    secure: dJorqYFF62fkQHnqQrU/tWRhdzBB3Zji4QGEhtln1ddAQL/k/hi1u/k18MtLYOdXm926DewAGb4iER5495C426vNBsIVqKR9z9vdecqnJAZqD3pIWpmLE1H03yqhZcXKRXT3HvX+3G0woKSi9RGQGj5CgOohjBQMH81fj7rgwWY=
+    secure: k+JGXOu76Fwc99j84tPVHA4VIBhieUWQ6WyqE+CH57VIloTuhDAwudQU3sRFcEHTYY0sYqn/lE10k1Ono0RnxCYT9l9QjpEn/re6dWMTESdIe+FuwGSxntXbbAdQC7qnwoxUydzgeWLmdKZY+G0t5LtdCBUSKt6oA8NK2c4sw0s=
   app: nbarnes-blog
   on:
     repo: nbarnes/portfolio
   run:
-    - "rake db:migrate"
+    - rake db:migrate
